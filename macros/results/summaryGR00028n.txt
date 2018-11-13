@@ -1,0 +1,302 @@
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00001.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00002.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00003.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00004.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00005.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00006.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00007.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00008.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00009.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00010.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00011.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00012.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00013.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00014.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00015.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00016.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00017.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00018.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00019.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00020.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00021.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00022.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00023.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00024.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00025.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00026.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00027.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00028.txt
+46 65535 64511
+total 1
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00029.txt
+46 65535 64511
+total 1
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00030.txt
+46 65535 64511
+total 1
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00031.txt
+21 500 191
+46 65535 64511
+total 2
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00032.txt
+21 500 191
+46 65535 64511
+total 2
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00033.txt
+21 500 191
+46 65535 64511
+total 2
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00034.txt
+21 500 191
+46 65535 64511
+total 2
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00035.txt
+21 500 191
+46 65535 64511
+total 2
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00036.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00037.txt
+21 500 191
+43 520 0
+46 65535 64511
+51 65535 0
+59 15 0
+67 500 0
+75 15 0
+total 7
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00038.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00039.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00041.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00042.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00043.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00044.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00045.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00046.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00047.txt
+21 500 191
+44 16640 0
+46 65535 64511
+52 65535 0
+68 85 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00049.txt
+21 500 191
+41 1000 71
+44 16640 0
+46 65535 64511
+52 65535 0
+53 65535 0
+61 60 0
+68 85 0
+69 31 0
+total 9
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00050.txt
+21 500 191
+41 1000 71
+44 16640 0
+46 65535 64511
+52 65535 0
+53 65535 0
+61 60 0
+68 85 0
+69 31 0
+total 9
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00051.txt
+21 500 191
+41 1000 71
+44 16640 0
+46 65535 64511
+52 65535 0
+53 65535 0
+61 60 0
+68 85 0
+69 31 0
+total 9
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00052.txt
+21 500 191
+41 1000 71
+44 16640 0
+46 65535 64511
+52 65535 0
+53 65535 0
+61 60 0
+68 85 0
+69 31 0
+total 9
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00054.txt
+21 500 191
+41 1000 71
+44 16640 0
+46 65535 64511
+52 65535 0
+53 65535 0
+61 60 0
+68 85 0
+69 31 0
+total 9
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00055.txt
+21 500 191
+41 1000 71
+44 16640 0
+46 65535 64511
+52 65535 0
+53 65535 0
+61 60 0
+68 85 0
+69 31 0
+total 9
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00056.txt
+21 500 191
+41 1000 71
+44 16640 0
+46 65535 64511
+52 65535 0
+53 65535 0
+61 60 0
+68 85 0
+69 31 0
+total 9
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00057.txt
+21 500 191
+41 1000 71
+44 16640 0
+46 65535 64511
+52 65535 0
+53 65535 0
+61 60 0
+68 85 0
+69 31 0
+total 9
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00059.txt
+21 500 191
+41 1000 71
+46 65535 64511
+49 65535 0
+50 65535 0
+57 65535 0
+58 65535 0
+65 400 0
+66 50 0
+73 103 0
+74 240 0
+total 11
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00060.txt
+21 500 191
+41 1000 71
+42 1000 0
+46 65535 64511
+50 65535 0
+51 65535 0
+58 65535 0
+59 15 0
+66 50 0
+67 500 0
+74 240 0
+75 15 0
+total 12
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00061.txt
+21 500 191
+32 65535 0
+41 1000 71
+43 520 0
+46 65535 64511
+51 65535 0
+52 65535 0
+59 15 0
+67 500 0
+68 85 0
+75 15 0
+total 11
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00028_GR00063.txt
+21 500 191
+41 1000 71
+45 200 0
+46 65535 64511
+53 65535 0
+54 15 0
+61 60 0
+62 5124 0
+69 31 0
+70 600 0
+total 10

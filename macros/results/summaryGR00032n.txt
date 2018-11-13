@@ -1,0 +1,16 @@
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00032_GR00001.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00032_GR00002.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00032_GR00003.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00032_GR00004.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00032_GR00005.txt
+19 300 122
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6

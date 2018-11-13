@@ -1,0 +1,354 @@
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00001.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00002.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00003.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00004.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00005.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00006.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00007.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00008.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00009.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00010.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00011.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00012.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00013.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00014.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00015.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00016.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00017.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00018.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00019.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00020.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00021.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00022.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00023.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00024.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00025.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00026.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00027.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00028.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00029.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00030.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00031.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00032.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00033.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00034.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00035.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00036.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00037.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00038.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00039.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00040.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00041.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00042.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00043.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00044.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00045.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00046.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00047.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00048.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00049.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00050.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00051.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00052.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00053.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00054.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00055.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00056.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00057.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00058.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00059.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00060.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00061.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00062.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00063.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00064.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00065.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00066.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00067.txt
+total 0
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00068.txt
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00069.txt
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00070.txt
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00071.txt
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00072.txt
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00073.txt
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 5
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00074.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00075.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00076.txt
+13 450 161
+30 4 0
+38 16 0
+46 65535 0
+54 15 0
+62 5124 0
+70 600 0
+total 7
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00077.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00078.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00079.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00080.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00081.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00082.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00083.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00084.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00085.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00086.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00087.txt
+13 450 161
+37 64 0
+45 200 0
+53 65535 0
+61 60 0
+69 31 0
+total 6
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00088.txt
+13 450 161
+18 110 0
+26 250 0
+34 1 0
+37 64 0
+42 1000 0
+45 200 0
+50 65535 0
+53 65535 0
+58 65535 0
+61 60 0
+66 50 0
+69 31 0
+74 240 0
+total 14
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00089.txt
+13 450 161
+18 110 0
+26 250 0
+34 1 0
+37 64 0
+42 1000 0
+45 200 0
+50 65535 0
+53 65535 0
+58 65535 0
+61 60 0
+66 50 0
+69 31 0
+74 240 0
+total 14
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00091.txt
+13 450 161
+24 1000 0
+27 50 0
+32 65535 0
+35 65535 0
+42 1000 488
+43 520 0
+48 65535 0
+51 65535 0
+56 65535 0
+59 15 0
+64 1051 0
+67 500 0
+75 15 0
+total 14
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00030_GR00092.txt
+13 450 161
+18 110 0
+26 250 0
+31 852 0
+34 1 0
+37 64 0
+42 1000 0
+45 200 0
+50 65535 0
+53 65535 0
+58 65535 0
+61 60 0
+66 50 0
+69 31 0
+74 240 0
+total 15
