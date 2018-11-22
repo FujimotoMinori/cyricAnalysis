@@ -20,7 +20,7 @@ int totalrowcol(/*const string& inputFile*/){
 
     //set open file
     //TString ifn = inputFile;
-    TString ifn = "/home/pixeldaq/YARR_rd53a/cyric/macros/sumcol.txt" ;
+    TString ifn = "/home/pixeldaq/YARR_rd53a/cyric/cyricAnalysis/macros/sumplace2.txt" ;
     ifstream fin;
     std::string str;
 
@@ -34,12 +34,11 @@ int totalrowcol(/*const string& inputFile*/){
     std::cout << "#finished opening files" << std::endl;
 
     //define histogram
-    TH2F* h2 = new TH2F("h2","flipped row/col in each readout_cycle",142,0,142,400,0,400);
+    TH2F* h2 = new TH2F("h2","flipped row/col in each readout_cycle",400,0,400,192,0,192);
 
     //read file
     char a[10000] = {};
-    int b;
-    int c;
+    int b,c,d;
     int count = 1;
     while(getline(fin,str))
     {
@@ -47,28 +46,28 @@ int totalrowcol(/*const string& inputFile*/){
 	if(str[0] == 't') {
 	    b = 0;
 	    sscanf(str.data(),"%s %d",a,&b);
+            //std::cout << "total = " << b << std::endl;
 	    ++count;
+	    //std::cout << "count = " << count << std::endl;
 	}else{
 	    c = 0;
-	    sscanf(str.data(),"%d",&c);
-            //cout << "c= " << c << endl;
-	    //++bcount;
+	    sscanf(str.data(),"%d %d",&c,&d);
 	}
-            //cout << "c= " << c << endl;
-            //cout << "count=" << count << endl;
-            h2->Fill(count,c);
+	if(b!=76800) {
+            //std::cout << "total = " << b << std::endl;
+	    //std::cout << "count = " << count << std::endl;
+	    if(count == 10) h2->Fill(c,d);
+	}
     }
-
-    //std::cout << "#count=" << count << std::endl;
 
     //set root file for output
     //string foutname = "outputPR.root";
     //TFile* fout = TFile::Open(foutname.c_str(), "RECREATE");
 
-
     //draw 2Dhistogram
     //TCanvas *c1 = new TCanvas("c", "c",1000,1000);
-    h2->SetTitle("SEU test;Readout Cycle;number of flip bit");
+    h2->SetTitle("SEU test;col;row");
+    h2->SetStats(0);
     h2->Draw("colz");
 
     //fout->Write();

@@ -19,7 +19,7 @@ int analyzerowcol(const string& inputFile){
     std::cout << "#-----start analyzerowcol.cxx-----" << std::endl;
 
     //set open file
-    TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00029_PR00001.txt";
+    TString ifn = "/home/pixeldaq/cyricdata/afterIrrad/src/registerdata/run00029_PR00001.txt";
     TString ifn2 = inputFile;
     std::cout << "#inputFile=" <<ifn2 << std::endl;
     ifstream fin;
@@ -70,9 +70,7 @@ int analyzerowcol(const string& inputFile){
     }
 
     //set file for summary output
-    std::ofstream summaryrow("sumrow.txt" ,std::ios::app);
-    std::ofstream summarycol("sumcol.txt" ,std::ios::app);
-
+    std::ofstream summaryplace("sumplace.txt" ,std::ios::app);
 
     //get values of each bits
     bool bits[8][n_Col][n_Row];
@@ -99,8 +97,7 @@ int analyzerowcol(const string& inputFile){
     for (unsigned row=0; row<n_Row; row+=1) {
 	for (unsigned col=0; col<n_Col; col+=1) {
 	    if(val[col][row] != val2[col][row]){
-		summaryrow << row << std::endl;
-		summarycol << col << std::endl;
+		summaryplace << col << " " << row << std::endl;
 		++total;
 	    }
 
@@ -124,11 +121,10 @@ int analyzerowcol(const string& inputFile){
     */
 
     std::cout << "numbers of total false bits = " << total << std::endl;
-    summaryrow << "total " << total << std::endl;
-    summarycol << "total " << total << std::endl;
+    summaryplace << "total " << total << std::endl;
+    //summarycol << "total " << total << std::endl;
 
-    summaryrow.close();
-    summarycol.close();
+    summaryplace.close();
 
     fin.close();
     fin2.close();
@@ -136,6 +132,4 @@ int analyzerowcol(const string& inputFile){
     return 0;
     std::cout << "#-----finished analyzerowcol.cxx-----" << std::endl;
 }
-
-
 

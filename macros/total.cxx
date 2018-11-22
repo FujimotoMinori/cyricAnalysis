@@ -95,6 +95,7 @@ int total(const string& inputFile){
   //TF1 * f1 = new TF1("func","pol1",20,100);
   TF1 *f = new TF1("f","[0]+[1]*x",20,20);
   //grt->Fit("func");
+  //for run30
   grt->Fit(f,"","",10,130);
   double p0 = 0.;
   double p1 = 0.;
