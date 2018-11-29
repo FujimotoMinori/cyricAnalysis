@@ -20,7 +20,7 @@ int totalrowcol(/*const string& inputFile*/){
 
     //set open file
     //TString ifn = inputFile;
-    TString ifn = "/home/pixeldaq/YARR_rd53a/cyric/cyricAnalysis/macros/sumplace2.txt" ;
+    TString ifn = "/Users/fujimoto/cyric11/cyricData/sumplace_run00046.txt" ;
     ifstream fin;
     std::string str;
 
@@ -54,9 +54,9 @@ int totalrowcol(/*const string& inputFile*/){
 	    sscanf(str.data(),"%d %d",&c,&d);
 	}
 	if(b!=76800) {
-            //std::cout << "total = " << b << std::endl;
+        //std::cout << "total = " << b << std::endl;
 	    //std::cout << "count = " << count << std::endl;
-	    if(count == 10) h2->Fill(c,d);
+	    h2->Fill(c,d);
 	}
     }
 
@@ -69,6 +69,9 @@ int totalrowcol(/*const string& inputFile*/){
     h2->SetTitle("SEU test;col;row");
     h2->SetStats(0);
     h2->Draw("colz");
+    //TH1D *pj = h2->ProjectionX("object name",100,400);
+    //pj->Draw();
+
 
     //fout->Write();
     //fout->Close();
