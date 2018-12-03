@@ -1,6 +1,7 @@
 /*
    readCurrent.C
    read dump current and make histogram 
+   use this code if you want to see DumpCurrent
  */
 
 {
@@ -15,7 +16,7 @@
 
     //read data
     //ifstream ifs("DumpCurrent4.txt");
-    ifstream ifs("dumpc.txt");
+    ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20181127-29/cyric1129_3.dat");
     std::cout << "set data" << std::endl;
     int i;
     while(!ifs.eof()){
@@ -25,9 +26,9 @@
         x.push_back(xx);
         num.push_back(i);
         //if(i>12375&&i<14664){
-        if(i>2521&&i<4810){
+        //if(i>2521&&i<4810){
             h1->Fill(xx);
-        }
+        //}
     }
     ifs.close();
     std::cout << "finished reading file" << std::endl;
