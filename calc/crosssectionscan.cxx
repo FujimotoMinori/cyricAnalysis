@@ -10,6 +10,7 @@
 static const double ECHARGE = 1.6*1.0e-19;
 static const double X = 2.0;
 static const double Y = 0.96;
+static const double AllPixel = 491520;
 
 int main(){
 

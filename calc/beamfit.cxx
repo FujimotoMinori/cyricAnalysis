@@ -52,6 +52,5 @@ void beamfit() {
         }
     }
     //h3->Draw("colz");
-
 }
 

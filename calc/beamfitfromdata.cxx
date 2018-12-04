@@ -22,7 +22,7 @@ void beamfitfromdata(/*const string& inputFile*/) {
     std::cout << "#-----start beamfitfromdata.cxx-----" << std::endl;
 
     //string finname = inputFile;
-    string finname = "/Users/fujimoto/cyric11/cyricData/summaryrowcol_run00052.root";
+    string finname = "/Users/fujimoto/cyric11/cyricData/summaryrowcol_run00053.root";
 
     //file open
     TFile* fin = TFile::Open(finname.c_str(), "READ");
@@ -37,18 +37,36 @@ void beamfitfromdata(/*const string& inputFile*/) {
     //draw histogram
     TCanvas *c1 = new TCanvas("c1", "c1");
     h2->Draw("colz");
-    //Int_t first = h2->GetXaxis()->FindBin(0.);
-    //Int_t last  = h2->GetXaxis()->FindBin(192.);
     TH1D *pjx = h2->ProjectionX("ProjectionX",0,192);
     TH1D *pjy = h2->ProjectionY("ProjectionY",0,400);
+
+    //fit histogram
+    TF1 *fx = new TF1("fx","gaus",0,400);
+    TF1 *fy = new TF1("fy","gaus",0,400);
+
+    //fx->SetParameter(0,180);
+    //fx->SetParameter(1,-0.6e-9);
+    //fx->SetParameter(2,0.5e-10);
+
     pjx->SetStats(0);
     pjy->SetStats(0);
     TCanvas *c2 = new TCanvas("c2", "c2");
     pjx->Draw();
+    pjx->Fit("fx","l","",0,400);
+    double meanx = fx->GetParameter(1);
+    double sigmax = fx->GetParameter(2);
+    std::cout << "mean=" << meanx << std::endl;
+    //std::cout << "sigma=" << sigmax << std::endl;
+    std::cout << "beamsigma=" << sigmax*50e-6*1000 << "mm" << std::endl;
+
     TCanvas *c3 = new TCanvas("c3", "c3");
     pjy->Draw();
-
-    return;
+    pjy->Fit("fy","l","",0,192);
+    double meany = fy->GetParameter(1);
+    double sigmay = fy->GetParameter(2);
+    std::cout << "mean=" << meany << std::endl;
+    //std::cout << "sigma=" << sigmay << std::endl;
+    std::cout << "beamsigma=" << sigmay*50e-6*1000 << "mm" << std::endl;
 
     const Int_t npar = 5;
     Double_t f2params[npar] = {1,0,3,0,3};
@@ -58,7 +76,10 @@ void beamfitfromdata(/*const string& inputFile*/) {
     //Create an histogram and fill it randomly with f2
     TH2F *h2org = new TH2F("h2org","beam",50,-10,10,48,-5,5);
     Int_t nentries = h2->GetEntries();
-    std::cout << "nentries=" << nentries;
+    std::cout << "nentries=" << nentries << std::endl;
+    //h2org->SetBinContent(h2->GetBinContent());
+
+    return;
 
     h2org->FillRandom("f2",nentries);
     h2org->Draw("colz");
@@ -74,5 +95,4 @@ void beamfitfromdata(/*const string& inputFile*/) {
     h2org->Scale(1./total);
 
 }
-
 
