@@ -11,12 +11,12 @@
     vector<Double_t> num,x;
 
     std::cout << "start" << std::endl;
-    TH1F *h1 = new TH1F("h1","h1",100,-2.0e-9,2.0e-9);
+    TH1F *h1 = new TH1F("h1","h1",100,0.,6.0e-9);
     TH1F *h2 = new TH1F("h2","h2",100,-2.0e-9,2.0e-9);
 
     //read data
     //ifstream ifs("DumpCurrent4.txt");
-    ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20181127-29/cyric1129_3.dat");
+    ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20181127-29/cyric1129_2.dat");
     std::cout << "set data" << std::endl;
     int i;
     while(!ifs.eof()){
@@ -25,10 +25,9 @@
         i++;
         x.push_back(xx);
         num.push_back(i);
-        //if(i>12375&&i<14664){
-        //if(i>2521&&i<4810){
+        if(i>1140&&i<1210){
             h1->Fill(xx);
-        //}
+        }
     }
     ifs.close();
     std::cout << "finished reading file" << std::endl;
@@ -58,7 +57,7 @@
     //h1->Fit("gaus");
 
     TCanvas* c1 = new TCanvas("c1");
-    tg->Draw("");
+    tg->Draw("AP");
     TCanvas* c2 = new TCanvas("c2");
     h1->Draw();
 

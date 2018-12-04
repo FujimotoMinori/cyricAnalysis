@@ -1,5 +1,5 @@
 /*
-   calcurate the 
+   calcurate the ratio of flux on pixelarea(target) 
  */
 
 #include <iostream>

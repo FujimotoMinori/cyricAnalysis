@@ -15,8 +15,10 @@ int main(){
 
     double Time = 180;
     double N = 4245;
+    double eN = sqrt(N);
 
     double Current = 1.0*1.0e-9;
+    double eCurrent = 1.0*1.0e-9;
     double beamsize = 0.27;
     double S = M_PI*(2*beamsize)*(2*beamsize);
     double AllPixel = 491520;
