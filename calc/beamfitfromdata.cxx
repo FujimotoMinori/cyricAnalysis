@@ -77,7 +77,7 @@ void beamfitfromdata(/*const string& inputFile*/) {
     TH2F *h2org = new TH2F("h2org","beam",50,-10,10,48,-5,5);
     Int_t nentries = h2->GetEntries();
     std::cout << "nentries=" << nentries << std::endl;
-    h2org->Fill(h2->GetBinContent());
+    //h2org->Fill(h2->GetBinContent());
 
     return;
 

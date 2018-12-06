@@ -15,12 +15,12 @@ static const double AllPixel = 491520;
 
 int main(){
 
-    std::cout << "run44" << std::endl; 
-    double Time = 180;
-    double N = 4245;
+    std::cout << "run45" << std::endl; 
+    double Time = 300;
+    double N = 8748;
     double eN = sqrt(N);
-    double Current = 0.8*1.0e-9;
-    double eCurrent = 5.5*1.0e-11;
+    double Current = 0.99*1.0e-9;
+    double eCurrent = 0.09*1.0e-9;
     double beamsize = 0.30; //[cm]
     //double ebeamsize = 
     double S = M_PI*(2*beamsize)*(2*beamsize);

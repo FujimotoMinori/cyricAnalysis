@@ -15,10 +15,10 @@ static const double AllPixel = 491520;
 int main(){
 
     double Time = 594;
-    double N = 4712;
+    double N = 5271;
 
     double Current = 1.0*1.0e-9;
-    double Fraction = Current*0.59;
+    double Fraction = Current*0.21;
     double beamsize = 0.3;
     double S = X*Y;
     std::cout << "S= " << S << std::endl; 

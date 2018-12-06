@@ -9,6 +9,7 @@ using namespace std;
 
 int calcCurrent(){
     double wx,wy,h;
+    double cx,cy;
     double ewx,ewy;
     double gauss;
     double V1,V2,V3,V4;
@@ -17,15 +18,17 @@ int calcCurrent(){
     double answer;
     double eanswer;
 
-    wx = 22.;
-    wy = 14.;
+    wx = 34.;
+    wy = 26.;
+    cx = 20.;
+    cy = 9.6;
     ewx = 1.0e-3;
     ewy = 1.0e-3;
     h = 10.;
 
     gauss = 3.96;
 
-    RV = 1920;
+    RV = cx*cy*h;
     V1 = wx*wy*h; 
     V2 = wx*gauss; 
     V3 = gauss*wy; 

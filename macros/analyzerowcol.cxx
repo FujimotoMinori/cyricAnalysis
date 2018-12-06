@@ -19,7 +19,7 @@ int analyzerowcol(const string& inputFile){
     std::cout << "#-----start analyzerowcol.cxx-----" << std::endl;
 
     //set open file
-    TString ifn = "/home/pixeldaq/cyricdata/afterIrrad/src/registerdata/run00029_PR00001.txt";
+    TString ifn = "/home/pixeldaq/cyricdata/afterIrrad/src/registerdata/run00044.txt";
     TString ifn2 = inputFile;
     std::cout << "#inputFile=" <<ifn2 << std::endl;
     ifstream fin;
