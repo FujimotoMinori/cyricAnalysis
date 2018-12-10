@@ -1,7 +1,6 @@
 /*
    totalrowcol.C
-
-   read summary file (summary*.txt) and just make graph of primary function
+   read summary file (sumplace*.txt) and just make 2Dhist of flipped place 
    */
 #include <iostream>
 #include <string>
@@ -20,7 +19,7 @@ int totalrowcol(/*const string& inputFile*/){
 
     //set open file
     //TString ifn = inputFile;
-    TString ifn = "/Users/fujimoto/cyric11/cyricData/sumplace_run00046.txt" ;
+    TString ifn = "/home/pixeldaq/cyric/cyricAnalysis/macros/results/sumplace_run00046.txt" ;
     ifstream fin;
     std::string str;
 
@@ -46,23 +45,27 @@ int totalrowcol(/*const string& inputFile*/){
 	if(str[0] == 't') {
 	    b = 0;
 	    sscanf(str.data(),"%s %d",a,&b);
-            //std::cout << "total = " << b << std::endl;
+	    //std::cout << "total = " << b << std::endl;
 	    ++count;
 	    //std::cout << "count = " << count << std::endl;
 	}else{
 	    c = 0;
 	    sscanf(str.data(),"%d %d",&c,&d);
 	}
-	if(b!=76800) {
-        //std::cout << "total = " << b << std::endl;
-	    //std::cout << "count = " << count << std::endl;
-	    h2->Fill(c,d);
-	}
+	    //std::cout << "total = " << b << std::endl;
+	//if(b != 76800) {
+	    std::cout << "count = " << count << std::endl;
+	    if(count == 25){ 
+	    std::cout << "c = " << c << std::endl;
+	    std::cout << "d = " << d << std::endl;
+		    h2->Fill(c,d);
+	    }
+	//}
     }
 
     //set root file for output
-    //string foutname = "outputPR.root";
-    //TFile* fout = TFile::Open(foutname.c_str(), "RECREATE");
+    string foutname = "outputplace.root";
+    TFile* fout = TFile::Open(foutname.c_str(), "RECREATE");
 
     //draw 2Dhistogram
     //TCanvas *c1 = new TCanvas("c", "c",1000,1000);
@@ -72,9 +75,8 @@ int totalrowcol(/*const string& inputFile*/){
     //TH1D *pj = h2->ProjectionX("object name",100,400);
     //pj->Draw();
 
-
-    //fout->Write();
-    //fout->Close();
+    h2->Write();
+    fout->Close();
 
     fin.close();
 

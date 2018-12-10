@@ -1,6 +1,6 @@
 /*
    analyzerowcol.C
-   compare two files and make summary file
+   compare two files and make summary file "sumplace.txt"
    */
 
 #include <iostream>
@@ -19,7 +19,7 @@ int analyzerowcol(const string& inputFile){
     std::cout << "#-----start analyzerowcol.cxx-----" << std::endl;
 
     //set open file
-    TString ifn = "/home/pixeldaq/cyricdata/afterIrrad/src/registerdata/run00044.txt";
+    TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00001.txt";
     TString ifn2 = inputFile;
     std::cout << "#inputFile=" <<ifn2 << std::endl;
     ifstream fin;
@@ -101,15 +101,15 @@ int analyzerowcol(const string& inputFile){
 		++total;
 	    }
 
-            /*
-	    for (int i=0; i<8; i+=1) {
-		if(bits[i][col][row] != bits2[i][col][row]) {
-		    ++f[i];
-		    ++total;
-		    //std::cout << "flipped col= " << col << " row= " << row << std::endl;
-		} 
-	    }
-            */
+	    /*
+	       for (int i=0; i<8; i+=1) {
+	       if(bits[i][col][row] != bits2[i][col][row]) {
+	       ++f[i];
+	       ++total;
+	//std::cout << "flipped col= " << col << " row= " << row << std::endl;
+	} 
+	}
+	*/
 	}
     }
 
@@ -117,8 +117,8 @@ int analyzerowcol(const string& inputFile){
        for (int i=0; i<8; i+=1) {
        std::cout << "numbers of false bits in bit[" << i << "] = " << f[i] << std::endl;
        summary << f[i] << " " << std::endl;
-    }
-    */
+       }
+       */
 
     std::cout << "numbers of total false bits = " << total << std::endl;
     summaryplace << "total " << total << std::endl;

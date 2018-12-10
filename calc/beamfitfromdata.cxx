@@ -22,7 +22,7 @@ void beamfitfromdata(/*const string& inputFile*/) {
     std::cout << "#-----start beamfitfromdata.cxx-----" << std::endl;
 
     //string finname = inputFile;
-    string finname = "/Users/fujimoto/cyric11/cyricData/summaryrowcol_run00053.root";
+    string finname = "/home/pixeldaq/cyric/cyricAnalysis/macros/results/outputplace_run00044.root";
 
     //file open
     TFile* fin = TFile::Open(finname.c_str(), "READ");
@@ -45,8 +45,8 @@ void beamfitfromdata(/*const string& inputFile*/) {
     TF1 *fy = new TF1("fy","gaus",0,400);
 
     //fx->SetParameter(0,180);
-    //fx->SetParameter(1,-0.6e-9);
-    //fx->SetParameter(2,0.5e-10);
+    fx->SetParameter(1,200);
+    fy->SetParameter(1,90);
 
     pjx->SetStats(0);
     pjy->SetStats(0);
@@ -57,7 +57,7 @@ void beamfitfromdata(/*const string& inputFile*/) {
     double sigmax = fx->GetParameter(2);
     std::cout << "mean=" << meanx << std::endl;
     //std::cout << "sigma=" << sigmax << std::endl;
-    std::cout << "beamsigma=" << sigmax*50e-6*1000 << "mm" << std::endl;
+    std::cout << "beamsigma=" << sigmax*50e-6*1000 << " mm" << std::endl;
 
     TCanvas *c3 = new TCanvas("c3", "c3");
     pjy->Draw();
@@ -66,7 +66,7 @@ void beamfitfromdata(/*const string& inputFile*/) {
     double sigmay = fy->GetParameter(2);
     std::cout << "mean=" << meany << std::endl;
     //std::cout << "sigma=" << sigmay << std::endl;
-    std::cout << "beamsigma=" << sigmay*50e-6*1000 << "mm" << std::endl;
+    std::cout << "beamsigma=" << sigmay*50e-6*1000 << " mm" << std::endl;
 
     const Int_t npar = 5;
     Double_t f2params[npar] = {1,0,3,0,3};
