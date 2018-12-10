@@ -19,7 +19,7 @@ int main(){
     double Time = 240;
     double N = 5654;
     double eN = sqrt(N);
-    double Current = 0.92*1.0e-9;
+    double Current = 0.77*0.95*1.0e-9;
     double eCurrent = 0.09*1.0e-9;
     double beamsize = 0.30; //[cm]
     //double ebeamsize = 

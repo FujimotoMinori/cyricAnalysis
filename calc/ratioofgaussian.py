@@ -1,5 +1,7 @@
 #coding:utf-8
 
+#get the ratio of beam area inside the RD53A chip 
+
 import numpy as np
 import matplotlib.pyplot as plt
 
