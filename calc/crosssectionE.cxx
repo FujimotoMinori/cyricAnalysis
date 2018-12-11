@@ -44,8 +44,8 @@ int main(){
     std::cout << "N=" << N << " +- " << eN << std::endl; 
 
     //(ii)
-    F = Current*0.95/ECHARGE/S;  
-    eF = (0.95/ECHARGE/S)*sqrt(pow(S*eCurrent,2)+pow(eCurrent*eS,2));  
+    F = Current*0.99/ECHARGE/S;  
+    eF = (0.99/ECHARGE/S)*sqrt(pow(S*eCurrent,2)+pow(eCurrent*eS,2));  
     std::cout << "F=" << F << " +- " << eF << std::endl; 
     Fxtime = F*Time; 
     eFxtime = eF*Time;
