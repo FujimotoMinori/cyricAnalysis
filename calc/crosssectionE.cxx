@@ -15,17 +15,17 @@ static const double AllPixel = 491520;
 
 int main(){
 
-    std::cout << "run44" << std::endl; 
-    double Time = 180;
-    double N = 4245;
+    std::cout << "run53" << std::endl; 
+    double Time = 240;
+    double N = 5654;
     double eN = sqrt(N);
-    double Current = 0.94*1.0e-9; //[A]
+    double Current = 1.23*1.0e-9; //[A]
     double eCurrent = 0.09*1.0e-9; //[A]
-    double beamsizex = 0.38; //[cm]
-    double beamsizez = 0.52; //[cm]
+    double beamsizex = 0.37; //[cm]
+    double beamsizez = 0.50; //[cm]
     double ebeamsizex = 0.01; //[cm]
     double ebeamsizez = 0.03; //[cm]
-    double NPixel = 307070;
+    double NPixel = 295636;
 
     double S = M_PI*(2*beamsizex)*(2*beamsizez);
     double eS = M_PI*4*sqrt(pow(beamsizez*ebeamsizex,2)+pow(beamsizex*ebeamsizez,2));
@@ -44,8 +44,8 @@ int main(){
     std::cout << "N=" << N << " +- " << eN << std::endl; 
 
     //(ii)
-    F = Current*0.99/ECHARGE/S;  
-    eF = (0.99/ECHARGE/S)*sqrt(pow(S*eCurrent,2)+pow(eCurrent*eS,2));  
+    F = Current*0.98/ECHARGE/S;  
+    eF = (0.98/ECHARGE/S)*sqrt(pow(S*eCurrent,2)+pow(eCurrent*eS,2));  
     std::cout << "F=" << F << " +- " << eF << std::endl; 
     Fxtime = F*Time; 
     eFxtime = eF*Time;

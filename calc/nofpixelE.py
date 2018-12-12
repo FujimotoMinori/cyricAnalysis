@@ -5,8 +5,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-sx = 3.88;
-sy = 5.24;
+sx = 3.73;
+sy = 4.99;
 
 def is_innerRD53A(x,y):
     return -10<=x<=10 and -5<=y<=5 

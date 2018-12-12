@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 sx = 3.8
-sz = 5.2 
+sz = 4.5 
 
 def is_innerRD53A(x,y):
     return -10<x<10 and -5<y<5 
@@ -17,7 +17,7 @@ def is_inner(x,y):
     return (x**2/(sx*2)**2)+(y**2/(sz*2)**2) < 1 
 
 mu1 = [0,0]
-cov = [[3.8,0],[0,5.2]]
+cov = [[3.8,0],[0,4.5]]
 
 inner_points_cnt = 0
 all_points_cnt = 0
@@ -32,10 +32,14 @@ for x, y in zip(x1, y1):
            inner_points_cnt += 1
 
 ratio = (inner_points_cnt / all_points_cnt)
+ratio2 = (inner_points_cnt / 1000000)
 
 print(all_points_cnt)
 print(inner_points_cnt)
+print("ratio inside the elipse vs inside rd53a")
 print(ratio)
+print("ratio inside the elipse vs beam ")
+print(ratio2)
 
 plt.figure(facecolor="w")
 plt.scatter(x1,y1,color='r',marker='x',label="$mu = 3.0$")
@@ -46,7 +50,7 @@ plt.ylabel('$y$',size=10)
 
 plt.gca().set_aspect('equal', adjustable='box')
   
-plt.axis([-10.0,10.0,-5.0,5.0],size=20)
+plt.axis([-20.0,20.0,-10.0,10.0],size=20)
 plt.grid(True)
 plt.legend()
 
