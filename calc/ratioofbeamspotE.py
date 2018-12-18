@@ -42,7 +42,7 @@ print("ratio inside the elipse vs beam ")
 print(ratio2)
 
 plt.figure(facecolor="w")
-plt.scatter(x1,y1,color='r',marker='x',label="$mu = 3.0$")
+plt.scatter(x1,y1,color='r',marker='x')
 
 #plt.figtext(0.8,0.6,"$R_1$",size=20)
 plt.xlabel('$x$',size=10)
@@ -50,7 +50,7 @@ plt.ylabel('$y$',size=10)
 
 plt.gca().set_aspect('equal', adjustable='box')
   
-plt.axis([-20.0,20.0,-10.0,10.0],size=20)
+plt.axis([-10.0,10.0,-5.0,5.0],size=20)
 plt.grid(True)
 plt.legend()
 

@@ -4,8 +4,8 @@
 void OverscanSim2D(){
   double beamsigmax=4;
   double beamsigmay=4;
-  double overscansigmax=3;
-  double overscansigmay=3;
+  double overscansigmax=3.0;
+  double overscansigmay=3.0;
   //  double pos=0;
   //  double endpos=10;
   double samplesizex=20;

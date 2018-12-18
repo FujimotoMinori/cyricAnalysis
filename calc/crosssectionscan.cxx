@@ -14,42 +14,47 @@ static const double AllPixel = 491520;
 
 int main(){
 
+    std::cout << "run41" << std::endl; 
     double Time = 594;
-    double N = 5271;
+    double N = 4562;
+    double Current = 1.06*1.0e-9;
+    double eCurrent = 0.05*1.0e-9;
+    double ratio = 0.19; //todo
+    double eratio;
 
-    double Current = 1.0*1.0e-9;
-    double Fraction = Current*0.21;
-    double beamsize = 0.3;
+    double eN = sqrt(N);
+    double Fraction = Current*ratio; 
+    double eFraction = eCurrent*ratio; 
     double S = X*Y;
-    std::cout << "S= " << S << std::endl; 
-    double AllPixel = 491520;
-    double L;
-    double F;
-    double Fxtime;
-    double Sigma;
-    double NPixel;
-    double SigmaPixel;
+    double L,eL;
+    double F,eF;
+    double Fxtime,eFxtime;
+    double Sigma,eSigma;
+    double SigmaPixel,eSigmaPixel;
 
     L = Fraction/ECHARGE;   
-    std::cout << "L= " << L << std::endl; 
+    eL = eFraction/ECHARGE;   
+    std::cout << "L=" << L << " +- " << eL << std::endl; 
 
     //(i)
-    std::cout << "N= " << N << std::endl; 
+    std::cout << "N=" << N << " +- " << eN << std::endl; 
 
     //(ii)
     F = Fraction/ECHARGE/S;  
-    std::cout << "F= " << F << std::endl; 
+    eF = eFraction/ECHARGE/S;  
+    std::cout << "F=" << F << " +- " << eF << std::endl; 
     Fxtime = F*Time; 
-    std::cout << "Fxtime= " << Fxtime << std::endl; 
+    eFxtime = eF*Time;
+    std::cout << "Fxtime=" << Fxtime << " +- " << eFxtime << std::endl; 
 
     Sigma = N/Fxtime;
-    std::cout << "Sigma= " << Sigma << std::endl; 
+    eSigma = sqrt(pow(Fxtime*eN,2)+pow(N*eFxtime,2))/pow(Fxtime,2); 
+    std::cout << "Sigma=" << Sigma << " +- " << eSigma << std::endl; 
 
-    NPixel = AllPixel; 
-    std::cout << "AllPixel= " << AllPixel << std::endl; 
-
-    SigmaPixel = Sigma/NPixel;
-    std::cout << "SigmaPixel= " << SigmaPixel << std::endl; 
+    SigmaPixel = Sigma/AllPixel;
+    eSigmaPixel = eSigma/AllPixel;
+    std::cout << "SigmaPixel=" << SigmaPixel << " +- " << eSigmaPixel << std::endl; 
+    
     return 0;
 
 }
