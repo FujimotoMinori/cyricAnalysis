@@ -10,11 +10,8 @@ static const double ECHARGE = 1.6*1.0e-19;
 static const double Current = 0.99*1.0e-9; //[A]
 static const double Time = 388; //[s]
 
-//double b[nbinx+1][nbiny+1];
-//double m[nbinx+1][nbiny+1];
 double b[401][193];
 double m[401][193];
-
 
 void loglikelihood(Int_t &npar, Double_t *gin, Double_t &f, Double_t *par, Int_t iflag){
     double y = 0;
