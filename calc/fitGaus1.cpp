@@ -1,0 +1,17 @@
+//tutorial1 for RooFit
+using namespace RooFit;
+
+void fitGaus1()
+{
+    RooRealVar x("x", "x", -10, 10);
+    RooRealVar mean("mean", "Mean of Gaussian", 0, -10, 10);
+    RooRealVar sigma("sigma", "Width of Gaussian", 1, -10, 10);
+
+    RooGaussian gauss("gauss", "gauss(x, mean, sigma)", x, mean, sigma);
+
+    RooPlot* xframe = x.frame();
+    gauss.plotOn(xframe);
+    xframe->Draw();
+}
+
+
