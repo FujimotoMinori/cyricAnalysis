@@ -7,7 +7,7 @@
 #define _USE_MATH_DEFINES
 
 static const double ECHARGE = 1.6*1.0e-19;
-static const double Current = 1.0*1.0e-9; //[A]
+static const double Current = 0.99*1.0e-9; //[A]
 static const double Time = 388; //[s]
 
 double b[401][193];
@@ -18,8 +18,6 @@ void loglikelihood(Int_t &npar, Double_t *gin, Double_t &f, Double_t *par, Int_t
     for(int i=1; i<=400; i++){
         for(int j=1; j<=192; j++){
             double yi = 0;
-            //std::cout << "b["<< i << "][" << j << "]= " << b[i][j] << std::endl;
-            //std::cout << "m["<< i << "][" << j << "]= " << m[i][j] << std::endl;
             yi = -m[i][j]*log(b[i][j]*par[0])+b[i][j]*par[0];
             y += yi;
         }
@@ -37,25 +35,22 @@ void forfit(){
     TH2F *h2 = (TH2F*)fin->Get("h2"); 
     /////////////////////////////////////////////////////////////////////
 
-    double beamsigmax =4. ; //[mm]
-    double beamsigmay =4. ; //[mm]
+    double beamsigmax =3.79 ; //[mm]
+    double beamsigmay =4.99 ; //[mm]
     double samplesizex=20.; //[mm]
     double samplesizey=10.; //[mm]
 
     int nbinx = 400;
     int nbiny = 192;
-    int nlatch = 1;
+    int nlatch = 8;
     double S = (samplesizex/nbinx)*(samplesizey/nbiny)*0.01; //[cm]*[cm]
     std::cout << "S= "<< S << std::endl;
     
     double A = nlatch*Time*Current/ECHARGE/S;
     std::cout << "A= "<< A << std::endl;
 
-    //double b[nbinx+1][nbiny+1];
-    //double m[nbinx+1][nbiny+1];
-
     TF2 *f2 = new TF2("f2","[0]*TMath::Gaus(x,[1],[2])*TMath::Gaus(y,[3],[4])",0,20,0,10); 
-    f2->SetParameters(Current,samplesizex/2.,beamsigmax,samplesizey/2.,beamsigmay); 
+    f2->SetParameters(1,samplesizex/2.,beamsigmax,samplesizey/2.,beamsigmay); 
 
     double xmin = 0;
     double xmax = samplesizex;
@@ -75,8 +70,13 @@ void forfit(){
             */
         }
     }
-    //h1->Scale(h1->GetEntries());
     double integral = h1->Integral();
+    std::cout << "integral= "<< integral << std::endl;
+    double mean = h1->GetMaximum();
+    std::cout << "max1= "<< mean << std::endl;
+    h1->Scale(A/h1->Integral());
+    double mean2 = h1->GetMaximum();
+    std::cout << "max2= "<< mean2 << std::endl;
 
     for(int ix = 1;ix<=nbinx;ix++){
         for(int iy = 1;iy<=nbiny;iy++){
@@ -87,7 +87,6 @@ void forfit(){
         }
     }
 
-    /*
     //use TMinuit 
     TMinuit *min = new TMinuit(1);
     min->SetPrintLevel(1);
@@ -96,7 +95,7 @@ void forfit(){
 
     double par, parErr;
     string parName = "para";
-    double stepSize = 1, minVal = 0., maxVal = 0.;
+    double stepSize = 1.0e-15, minVal = 1.0e-15, maxVal = 1.0e-13;
 
     min->DefineParameter(0, parName.c_str(), par, stepSize, minVal, maxVal);
     int migrad_stats = min->Migrad();
@@ -107,11 +106,12 @@ void forfit(){
     std::cout << "Status of Migrad: " << migrad_stats << std::endl;
 
     delete min;
-    */
 
+    /*
     TCanvas *c1 = new TCanvas("c1","c1");
     h1->SetStats(0);
     h1->Draw("colz");
+    */
 
     return;
 }
