@@ -7,7 +7,7 @@
 #define _USE_MATH_DEFINES
 
 static const double ECHARGE = 1.6*1.0e-19;
-static const double Current = 0.99*1.0e-9; //[A]
+static const double Current = 1.0*1.0e-9; //[A]
 static const double Time = 388; //[s]
 
 double b[401][193];
@@ -55,7 +55,7 @@ void forfit(){
     //double m[nbinx+1][nbiny+1];
 
     TF2 *f2 = new TF2("f2","[0]*TMath::Gaus(x,[1],[2])*TMath::Gaus(y,[3],[4])",0,20,0,10); 
-    f2->SetParameters(A,samplesizex/2.,beamsigmax,samplesizey/2.,beamsigmay); 
+    f2->SetParameters(Current,samplesizex/2.,beamsigmax,samplesizey/2.,beamsigmay); 
 
     double xmin = 0;
     double xmax = samplesizex;
@@ -67,11 +67,27 @@ void forfit(){
         for(int iy = 1;iy<=nbiny;iy++){
             double val = h1->GetBinContent(ix,iy);
             h1->SetBinContent(ix,iy,val+f2->Eval(h1->GetXaxis()->GetBinCenter(ix),h1->GetYaxis()->GetBinCenter(iy)));
+            /*
             b[ix][iy] = h1->GetBinContent(ix,iy);
             m[ix][iy] = h2->GetBinContent(ix,iy);
+            std::cout << "b["<< ix << "][" << iy << "]= " << b[ix][iy] << std::endl;
+            std::cout << "m["<< ix << "][" << iy << "]= " << m[ix][iy] << std::endl;
+            */
+        }
+    }
+    //h1->Scale(h1->GetEntries());
+    double integral = h1->Integral();
+
+    for(int ix = 1;ix<=nbinx;ix++){
+        for(int iy = 1;iy<=nbiny;iy++){
+            b[ix][iy] = h1->GetBinContent(ix,iy);
+            m[ix][iy] = h2->GetBinContent(ix,iy);
+            std::cout << "b["<< ix << "][" << iy << "]= " << b[ix][iy] << std::endl;
+            std::cout << "m["<< ix << "][" << iy << "]= " << m[ix][iy] << std::endl;
         }
     }
 
+    /*
     //use TMinuit 
     TMinuit *min = new TMinuit(1);
     min->SetPrintLevel(1);
@@ -91,10 +107,11 @@ void forfit(){
     std::cout << "Status of Migrad: " << migrad_stats << std::endl;
 
     delete min;
+    */
 
     TCanvas *c1 = new TCanvas("c1","c1");
-    h2->SetStats(0);
-    h2->Draw("colz");
+    h1->SetStats(0);
+    h1->Draw("colz");
 
     return;
 }
