@@ -12,7 +12,7 @@ static const double Time = 150; //[s]
 static const double beamsigmax =3.73 ; //[mm]
 static const double beamsigmay =4.99 ; //[mm]
 static const double samplesizex=20.; //[mm]
-static const double samplesizey=9.6; //[mm]
+static const double samplesizey=10.; //[mm]
 
 static const int nbinx = 400;
 static const int nbiny = 192;
@@ -34,7 +34,7 @@ void loglikelihood(Int_t &npar, Double_t *gin, Double_t &f, Double_t *par, Int_t
     f = y;
 }
 
-void forfit(){
+void forfit2(){
 
     /////////////////////////////////////////////////////////////////////
     string finname = "/Users/fujimoto/cyric11/cyricAnalysis/macros/results/outputplace_run00053.root";
@@ -82,13 +82,16 @@ void forfit(){
     h1->Scale(A);
     integral = h1->Integral();
     std::cout << "integral= "<< integral << std::endl;
+    h1->Scale(1./A);
+    integral = h1->Integral();
+    std::cout << "integral= "<< integral << std::endl;
 
     for(int ix = 1;ix<=nbinx;ix++){
         for(int iy = 1;iy<=nbiny;iy++){
-            b[ix][iy] = h1->GetBinContent(ix,iy);
-            m[ix][iy] = h2->GetBinContent(ix,iy);
-            //std::cout << "b["<< ix << "][" << iy << "]= " << b[ix][iy] << std::endl;
-            //std::cout << "m["<< ix << "][" << iy << "]= " << m[ix][iy] << std::endl;
+            b[ix][iy] = (h1->GetBinContent(ix,iy));
+            m[ix][iy] = (h2->GetBinContent(ix,iy));
+            std::cout << "b["<< ix << "][" << iy << "]= " << b[ix][iy] << std::endl;
+            std::cout << "m["<< ix << "][" << iy << "]= " << m[ix][iy] << std::endl;
         }
     }
 
@@ -100,8 +103,8 @@ void forfit(){
 
     double par, parErr;
     string parName = "para";
-    double stepSize = 1.0e-15, minVal = 1.0e-15, maxVal = 1.0e-13;
-    par = 2.8e-14;
+    double stepSize = 0.01, minVal = 0.01, maxVal = 1.0;
+    par = 0.1;
 
     min->DefineParameter(0, parName.c_str(), par, stepSize, minVal, maxVal);
     int migrad_stats = min->Migrad();
@@ -110,14 +113,16 @@ void forfit(){
     std::cout << "************************************************" << std::endl;
     std::cout << "Result: " <<par << " +/- " << parErr << std::endl;
     std::cout << "Status of Migrad: " << migrad_stats << std::endl;
+    std::cout << "************************************************" << std::endl;
+    std::cout << "Result: " <<par*integral << " +/- " << parErr*integral << std::endl;
 
     delete min;
 
+    /*
     TCanvas *c1 = new TCanvas("c1","c1");
-    h1->SetXTitle("x (mm)");
-    h1->SetYTitle("y (mm)");
     h1->SetStats(0);
     h1->Draw("colz");
+    */
     std::cout << "# of bitflip=  " << h2->GetEntries() << std::endl;
 
     return;

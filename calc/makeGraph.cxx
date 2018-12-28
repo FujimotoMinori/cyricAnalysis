@@ -5,7 +5,7 @@ void makeGraph(){
 	int n=0;
 
 	FILE* fp=0;
-	if( (fp=fopen("sigmaz.txt","r"))==0){
+	if( (fp=fopen("sigmax.txt","r"))==0){
 		std::printf("Cannot open file\n");
 		return;
 	}
@@ -25,7 +25,7 @@ void makeGraph(){
 	int n2=0;
 
 	FILE* fp2=0;
-	if( (fp2=fopen("sigmafitz.txt","r"))==0){
+	if( (fp2=fopen("sigmafitx.txt","r"))==0){
 		std::printf("Cannot open file\n");
 		return;
 	}
@@ -40,26 +40,29 @@ void makeGraph(){
 		n2++;
 	}
 
+    TCanvas* c1 = new TCanvas("c1");
 	TGraphErrors* g = new TGraphErrors(n,x,y,ex,ey);
 	g ->SetMarkerStyle(20);
+    g->SetMarkerSize(1);
 	g ->SetMarkerColor(kBlue);
+	g ->SetLineColor(kBlue);
 	g ->Draw("ap");
-	g ->SetTitle("Sigma;slot;sigma");
-	//g ->GetXaxis()->SetLimits(120,150);
+	g ->SetTitle("beamsigmax;# of slot;#sigma_{x} (mm)");
+	g ->GetXaxis()->SetLimits(0,16);
 
 	TGraphErrors* g2 = new TGraphErrors(n2,x2,y2,ex2,ey2);
 	g2 ->SetMarkerStyle(20);
-	//g2 ->SetMarkerColor(kRed);
-	g2 ->Draw("same ap");
+    g2 ->SetMarkerColor(kRed);
+    g2 ->SetLineColor(kRed);
+    g2 ->Draw("same p");
 
-	/*TF1 *f1 = new TF1("f1","[0]/(x-[1])",130,150);
-		f1 ->SetParameters(1.0e5,100.);
-		//f1 ->SetParNames("A","T_C");
-		g ->Fit("f1","","",130,150);
-		gStyle ->SetOptFit();
-		gStyle ->SetOptStat();
-		gStyle ->SetStatH(0.08);
-		gStyle ->SetStatW(0.08);*/
+    g->Fit("pol1","","",1.0,-1.0);
 
+    TLegend* leg=new TLegend(0.5,0.2,0.85,0.3);
+    leg->AddEntry(g,"fit from finger","p");
+    leg->AddEntry(g2,"fit from place of flipped bit","p");
+    leg->SetTextSize(0.03);
+    leg->Draw();
+    
 }
 

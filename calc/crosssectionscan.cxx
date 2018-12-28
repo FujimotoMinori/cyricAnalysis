@@ -15,16 +15,16 @@ static const double AllPixel = 491520;
 int main(){
 
     std::cout << "run41" << std::endl; 
-    double Time = 594;
-    double N = 4562;
-    double Current = 1.06*1.0e-9;
+    double Time = 458;
+    double N = 3461;
+    double Current = 1.01*1.0e-9;
     double eCurrent = 0.05*1.0e-9;
-    double ratio = 0.19; //todo
-    double eratio;
+    double ratio = 0.242; //todo
+    double eratio = 0.01;
 
     double eN = sqrt(N);
     double Fraction = Current*ratio; 
-    double eFraction = eCurrent*ratio; 
+    double eFraction = sqrt(pow(eCurrent*ratio,2)+pow(Current*eratio,2)); 
     double S = X*Y;
     double L,eL;
     double F,eF;

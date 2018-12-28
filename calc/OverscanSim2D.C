@@ -2,14 +2,14 @@
 
 #include "TF1.h"
 void OverscanSim2D(){
-  double beamsigmax=4;
-  double beamsigmay=4;
+  double beamsigmax=3.50;
+  double beamsigmay=3.80;
   double overscansigmax=3.0;
   double overscansigmay=3.0;
   //  double pos=0;
   //  double endpos=10;
   double samplesizex=20;
-  double samplesizey=10;
+  double samplesizey=9.6;
 
   double posstep=1;
   double precision=1./posstep;
@@ -63,15 +63,22 @@ void OverscanSim2D(){
   int binx1=nbinx-mergin/posstep;
   int biny0=mergin/posstep+1;
   int biny1=nbiny-mergin/posstep;
-  TCanvas *c1 = new TCanvas("c1","c1",1200,400);
-  c1->Divide(3,1);
-  c1->cd(1);
-  h1->Draw("COLZ");
+
+  h1->SetTitle(";x (mm);y (mm)");
+  h1->SetStats(0);
+  h2->SetTitle(";x (mm);y (mm)");
+  h2->SetStats(0);
+  h3->SetTitle(";x (mm);y (mm)");
+  h3->SetStats(0);
+  TCanvas *c1 = new TCanvas("c1","c1",600,400);
+  //c1->Divide(3,1);
+  //c1->cd(1);
+  //h1->Draw("COLZ");
   std::cout << "2sigma overscan fiducial / total current: " << h1->Integral(binx0,binx1,biny0,biny1)/h1->Integral() << std::endl;
-  c1->cd(2);
+  //c1->cd(2);
   h2->Draw("COLZ");
   std::cout << "1sigma os / 2sigma os : " << h2->Integral(binx0,binx1,biny0,biny1)/h1->Integral(binx0,binx1,biny0,biny1) << std::endl;
-  c1->cd(3);
-  h3->Draw("COLZ");
+  //c1->cd(3);
+  //h3->Draw("COLZ");
   std::cout << "0sigma os / 2sigma os : " << h3->Integral(binx0,binx1,biny0,biny1)/h1->Integral(binx0,binx1,biny0,biny1) << std::endl;
 }
