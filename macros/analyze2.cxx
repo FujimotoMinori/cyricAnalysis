@@ -18,7 +18,7 @@ int analyze2(const string& inputFile){
   std::cout << "#-----start analyze2.cxx-----" << std::endl;
  
   //set open file
-  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00029_PR00001.txt";
+  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00001.txt";
   TString ifn2 = inputFile;
   std::cout << "#inputFile=" <<ifn2 << std::endl;
   ifstream fin;
@@ -132,6 +132,7 @@ int analyze2(const string& inputFile){
   }
 
   std::cout << "numbers of total false bits = " << total << std::endl;
+  summary << "#inputFile=" <<ifn2 << std::endl;
   summary << "total " << total << std::endl;
 
   //Draw histograms

@@ -1,0 +1,300 @@
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00001.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00002.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00003.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00004.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00005.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00006.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00007.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00008.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00009.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00010.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00011.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00012.txt
+total 0
+1 
+1 
+1 
+2 
+1 
+3 
+1 
+1 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00013.txt
+total 11
+100 
+80 
+71 
+56 
+65 
+72 
+74 
+86 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00014.txt
+total 604
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00015.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00016.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00017.txt
+total 245760
+402 
+378 
+312 
+272 
+311 
+320 
+320 
+350 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00018.txt
+total 2665
+501 
+488 
+382 
+357 
+393 
+398 
+398 
+429 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00019.txt
+total 3346
+595 
+584 
+471 
+429 
+491 
+491 
+479 
+496 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00020.txt
+total 4036
+692 
+659 
+573 
+518 
+563 
+569 
+558 
+565 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00021.txt
+total 4697
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00022.txt
+total 245760
+878 
+843 
+727 
+657 
+693 
+715 
+669 
+719 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00023.txt
+total 5901
+988 
+942 
+801 
+727 
+785 
+792 
+753 
+802 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00024.txt
+total 6590
+1090 
+1054 
+882 
+791 
+851 
+869 
+824 
+875 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00025.txt
+total 7236
+1180 
+1138 
+966 
+860 
+928 
+953 
+892 
+939 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00026.txt
+total 7856
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00027.txt
+total 245760
+1316 
+1270 
+1083 
+967 
+1019 
+1052 
+1011 
+1030 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00028.txt
+total 8748
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00029.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00045_PR00030.txt
+total 245760
