@@ -19,11 +19,11 @@ int checkflipbit(const string& inputFile){
   std::cout << "#-----start checkflipbit.cxx-----" << std::endl;
  
   //set open file
-  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00046_PR00001.txt";
+  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00047_PR00001.txt";
   TString ifn2 = inputFile;
   
   TString name;
-  name.Form("canv.pdf");
+  name.Form("canv47.pdf");
   TCanvas* canv = new TCanvas(name.Data(),name.Data(),1000,800);
   canv->Print(name + "[","pdf");
 
@@ -95,9 +95,9 @@ int checkflipbit(const string& inputFile){
   TH2F *h7 = new TH2F("h7","bits[7];column;row",400,0,399,192,0,191);
   */
 
-  TH1F *htot = new TH1F("htot","bit flipped;# of bit;#of bit flip",9,0,8);
-  TH1F *hbit0 = new TH1F("hbit0","bit flipped;# of bit;#of bit flip",9,0,8);
-  TH1F *hbit1 = new TH1F("hbit1","bit flipped;# of bit;#of bit flip",9,0,8);
+  TH1F *htot = new TH1F("htot","bit flipped;# of bit;#of bit flip",8,0,8);
+  TH1F *hbit0 = new TH1F("hbit0","bit flipped;# of bit;#of bit flip",8,0,8);
+  TH1F *hbit1 = new TH1F("hbit1","bit flipped;# of bit;#of bit flip",8,0,8);
 
   //get values of each bits
   bool bits[8][n_Col][n_Row];
@@ -192,14 +192,18 @@ int checkflipbit(const string& inputFile){
   //summary << "total0 " << total0 << std::endl;
   //summary << "total1 " << total1 << std::endl;
 
+  htot->SetStats(0);
   htot->Draw("hist");
+  canv->Print(name,"pdf");
+  canv->Print(name + "]" ,"pdf");
+  //htot->Draw("hist");
+  /*
   canv->Print(name,"pdf");
   hbit0->Draw("hist");
   canv->Print(name,"pdf");
   hbit1->Draw("hist");
   canv->Print(name,"pdf");
   canv->Print(name + "]" ,"pdf");
-  /*
   //Draw histograms
   TCanvas *c1 = new TCanvas("c", "c",1000,1000);
   gStyle->SetOptStat(11);
