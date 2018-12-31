@@ -95,7 +95,7 @@ int checkflipbit(const string& inputFile){
   TH2F *h7 = new TH2F("h7","bits[7];column;row",400,0,399,192,0,191);
   */
 
-  TH1F *htot = new TH1F("htot","bit flipped;# of bit;#of bit flip",8,0,8);
+  TH1F *htot = new TH1F("htot","bit flipped;# of bit;ratio of bit flip",8,0,8);
   TH1F *hbit0 = new TH1F("hbit0","bit flipped;# of bit;#of bit flip",8,0,8);
   TH1F *hbit1 = new TH1F("hbit1","bit flipped;# of bit;#of bit flip",8,0,8);
 
@@ -204,6 +204,7 @@ int checkflipbit(const string& inputFile){
 
   htot->SetStats(0);
   htot->Draw("hist");
+  gPad->SetLeftMargin(0.15);
   canv->Print(name,"pdf");
   canv->Print(name + "]" ,"pdf");
   //htot->Draw("hist");
