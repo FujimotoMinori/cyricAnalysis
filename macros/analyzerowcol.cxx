@@ -19,7 +19,7 @@ int analyzerowcol(const string& inputFile){
     std::cout << "#-----start analyzerowcol.cxx-----" << std::endl;
 
     //set open file
-    TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00001.txt";
+    TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00046_PR00001.txt";
     TString ifn2 = inputFile;
     std::cout << "#inputFile=" <<ifn2 << std::endl;
     ifstream fin;
@@ -91,7 +91,7 @@ int analyzerowcol(const string& inputFile){
 	}
     }
 
-    //compare bits in 2 files
+    //compare value of pixels  in 2 files
     int f[8] = {};
     int total= 0;
     for (unsigned row=0; row<n_Row; row+=1) {
@@ -121,6 +121,7 @@ int analyzerowcol(const string& inputFile){
        */
 
     std::cout << "numbers of total false bits = " << total << std::endl;
+    summaryplace << "filename : " << ifn2 << std::endl;
     summaryplace << "total " << total << std::endl;
     //summarycol << "total " << total << std::endl;
 

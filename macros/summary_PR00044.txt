@@ -1,0 +1,140 @@
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00001.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00002.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00003.txt
+total 0
+41 
+49 
+37 
+38 
+40 
+32 
+33 
+31 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00004.txt
+total 301
+138 
+140 
+115 
+107 
+115 
+112 
+112 
+105 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00005.txt
+total 944
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00006.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00007.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00008.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00009.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00010.txt
+total 245760
+549 
+564 
+459 
+418 
+430 
+438 
+386 
+409 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00011.txt
+total 3653
+655 
+637 
+524 
+490 
+498 
+498 
+449 
+494 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00012.txt
+total 4245
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00013.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00044_PR00014.txt
+total 245760

@@ -19,7 +19,7 @@ int checkflipbit(const string& inputFile){
   std::cout << "#-----start checkflipbit.cxx-----" << std::endl;
  
   //set open file
-  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00029_PR00001.txt";
+  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00046_PR00001.txt";
   TString ifn2 = inputFile;
   
   TString name;
@@ -116,6 +116,7 @@ int checkflipbit(const string& inputFile){
 	bits[i][col][row] = bv; 
 	bits2[i][col][row] = bv2; 
       }
+      /*
       if(bits2[0][col][row] == 0b1) h0->Fill(col,row); 
       if(bits2[1][col][row] == 0b1) h1->Fill(col,row); 
       if(bits2[2][col][row] == 0b1) h2->Fill(col,row); 
@@ -124,6 +125,7 @@ int checkflipbit(const string& inputFile){
       if(bits2[5][col][row] == 0b1) h5->Fill(col,row); 
       if(bits2[6][col][row] == 0b1) h6->Fill(col,row); 
       if(bits2[7][col][row] == 0b1) h7->Fill(col,row); 
+*/
     }
   }
   std::cout << "now here" << std::endl;

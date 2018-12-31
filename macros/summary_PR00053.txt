@@ -1,0 +1,160 @@
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00001.txt
+total 0
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+0 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00002.txt
+total 0
+34 
+22 
+27 
+31 
+22 
+22 
+27 
+28 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00003.txt
+total 213
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00004.txt
+total 245760
+171 
+182 
+159 
+152 
+153 
+153 
+162 
+160 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00005.txt
+total 1292
+250 
+253 
+238 
+236 
+233 
+219 
+223 
+216 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00006.txt
+total 1868
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00007.txt
+total 245760
+384 
+369 
+336 
+333 
+315 
+315 
+320 
+343 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00008.txt
+total 2715
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00009.txt
+total 245760
+528 
+541 
+475 
+453 
+439 
+439 
+448 
+477 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00010.txt
+total 3800
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00011.txt
+total 245760
+638 
+653 
+564 
+530 
+522 
+512 
+532 
+577 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00012.txt
+total 4528
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00013.txt
+total 245760
+787 
+843 
+693 
+653 
+648 
+649 
+670 
+711 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00014.txt
+total 5654
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00015.txt
+total 245760
+38400 
+38400 
+38400 
+26112 
+26112 
+26112 
+26112 
+26112 
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00053_PR00016.txt
+total 245760
