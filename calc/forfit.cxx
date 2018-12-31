@@ -8,7 +8,7 @@
 
 static const double ECHARGE = 1.6*1.0e-19;
 static const double Current = 1.23*1.0e-9; //[A]
-static const double Time = 150; //[s]
+static const double Time = 240-2*18; //[s]
 static const double beamsigmax =3.73 ; //[mm]
 static const double beamsigmay =4.99 ; //[mm]
 static const double samplesizex=20.; //[mm]

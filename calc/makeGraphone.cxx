@@ -5,7 +5,7 @@ void makeGraphone(){
 	int n=0;
 
 	FILE* fp=0;
-	if( (fp=fopen("sigmathermal.txt","r"))==0){
+	if( (fp=fopen("allCS.txt","r"))==0){
 		std::printf("Cannot open file\n");
 		return;
 	}
@@ -25,8 +25,9 @@ void makeGraphone(){
 	g ->SetMarkerStyle(20);
     g->SetMarkerSize(1);
 	g ->SetMarkerColor(kBlue);
-	g ->SetTitle("SEU cross section;temprature(C);#sigma (cm^2)");
-	g ->GetYaxis()->SetLimits(1.0,3.0);
+	g ->SetTitle("SEU cross section;run number;#sigma (cm^{2})");
+    g->SetMaximum(3.0);
+    g->SetMinimum(0.0);
 	g ->Draw("ap");
 
 }

@@ -22,7 +22,7 @@ void beamfitfromdata(/*const string& inputFile*/) {
     std::cout << "#-----start beamfitfromdata.cxx-----" << std::endl;
 
     //string finname = inputFile;
-    string finname = "/Users/fujimoto/cyric11/cyricAnalysis/macros/results/outputplace_run00044.root";
+    string finname = "/Users/fujimoto/cyric11/cyricAnalysis/macros/results/outputplace_run00046.root";
 
     //file open
     TFile* fin = TFile::Open(finname.c_str(), "READ");
