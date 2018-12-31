@@ -131,14 +131,16 @@ int checkflipbit(const string& inputFile){
   std::cout << "now here" << std::endl;
 
   //compare bits in 2 files
-  int f[8] = {};
-  int f0[8] = {};
-  int f1[8] = {};
+  double f[8] = {};
+  double f0[8] = {};
+  double f1[8] = {};
   int total= 0;
-  int total0= 0;
-  int total1= 0;
-  int nbit0= 0;
-  int nbit1= 0;
+  double total0= 0;
+  double total1= 0;
+  double nbit0= 0;
+  double nbit1= 0;
+  int nbitS= (136*2)*192;
+  int nbitD= (128+136*2)*192;
   for (unsigned row=0; row<n_Row; row+=1) {
     for (unsigned col=0; col<n_Col; col+=1) {
       for (int i=0; i<8; i+=1) {
@@ -173,21 +175,29 @@ int checkflipbit(const string& inputFile){
     }
   }
 
+  
   for (int i=0; i<8; i++) {
     std::cout << "numbers of false bits in bit[" << i << "] = " << f[i] << std::endl;
     //summary << "bits[" << i << "]  " << f[i] << std::endl;
     //summary << f[i] << " " << std::endl;
+    if(i == 0 | i == 1 | i == 2) f[i] = f[i]/nbitS;
+    else f[i] = f[i]/nbitD;
+    std::cout << "numbers of false bits in bit[" << i << "] = " << f[i] << std::endl;
     htot->Fill(i,f[i]);
     hbit0->Fill(i,f0[i]);
     hbit1->Fill(i,f1[i]);
   }
 
 
+  std::cout << "numbers of Sync false bits = " << nbitS << std::endl;
+  std::cout << "numbers of Diff false bits = " << nbitD << std::endl;
   std::cout << "numbers of total false bits = " << total << std::endl;
   std::cout << "numbers of total0 false bits = " << total0 << std::endl;
   std::cout << "numbers of total1 false bits = " << total1 << std::endl;
   std::cout << "numbers of bit0 = " << nbit0 << std::endl;
   std::cout << "numbers of bit1 = " << nbit1 << std::endl;
+  std::cout << "ratio of total0 false bits = " << total0/nbit0 << std::endl;
+  std::cout << "ratio of total1 false bits = " << total1/nbit1 << std::endl;
   //summary << "total " << total << std::endl;
   //summary << "total0 " << total0 << std::endl;
   //summary << "total1 " << total1 << std::endl;
