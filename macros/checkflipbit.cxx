@@ -139,8 +139,8 @@ int checkflipbit(const string& inputFile){
   double total1= 0;
   double nbit0= 0;
   double nbit1= 0;
-  int nbitS= (136*2)*192;
-  int nbitD= (128+136*2)*192;
+  int nbitD= (136*2)*192;
+  int nbitS= (128+136*2)*192;
   for (unsigned row=0; row<n_Row; row+=1) {
     for (unsigned col=0; col<n_Col; col+=1) {
       for (int i=0; i<8; i+=1) {
