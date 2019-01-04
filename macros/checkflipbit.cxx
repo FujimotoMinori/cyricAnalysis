@@ -176,7 +176,7 @@ int checkflipbit(const string& inputFile){
   }
 
   
-  for (int i=0; i<8; i++) {
+  for (int i=0; i<=8; i++) {
     std::cout << "numbers of false bits in bit[" << i << "] = " << f[i] << std::endl;
     //summary << "bits[" << i << "]  " << f[i] << std::endl;
     //summary << f[i] << " " << std::endl;
@@ -184,10 +184,16 @@ int checkflipbit(const string& inputFile){
     else f[i] = f[i]/nbitD;
     std::cout << "numbers of false bits in bit[" << i << "] = " << f[i] << std::endl;
     htot->Fill(i,f[i]);
+    std::cout << "error=" << htot->GetBinError(i) << std::endl;
+    htot->SetBinError(i,0.0002);
+    std::cout << "error=" << htot->GetBinError(i) << std::endl;
     hbit0->Fill(i,f0[i]);
     hbit1->Fill(i,f1[i]);
   }
 
+  double etotal0 = sqrt(total0);
+  double etotal1 = sqrt(total1);
+  double erate0,erate1;
 
   std::cout << "numbers of Sync false bits = " << nbitS << std::endl;
   std::cout << "numbers of Diff false bits = " << nbitD << std::endl;
@@ -195,15 +201,18 @@ int checkflipbit(const string& inputFile){
   std::cout << "numbers of total0 false bits = " << total0 << std::endl;
   std::cout << "numbers of total1 false bits = " << total1 << std::endl;
   std::cout << "numbers of bit0 = " << nbit0 << std::endl;
+  nbit0 = nbit1;
+  std::cout << "numbers of bit0 = " << nbit0 << std::endl;
   std::cout << "numbers of bit1 = " << nbit1 << std::endl;
-  std::cout << "ratio of total0 false bits = " << total0/nbit0 << std::endl;
-  std::cout << "ratio of total1 false bits = " << total1/nbit1 << std::endl;
+  std::cout << "ratio of total0 false bits = " << total0/nbit0 << "+-" << etotal0/nbit0 << std::endl;
+  std::cout << "ratio of total1 false bits = " << total1/nbit1 << "+-" << etotal1/nbit1 << std::endl;
   //summary << "total " << total << std::endl;
   //summary << "total0 " << total0 << std::endl;
   //summary << "total1 " << total1 << std::endl;
 
+  htot->GetYaxis()->SetRangeUser(0,0.0120);
   htot->SetStats(0);
-  htot->Draw("hist");
+  htot->Draw("hist e");
   gPad->SetLeftMargin(0.15);
   canv->Print(name,"pdf");
   canv->Print(name + "]" ,"pdf");
