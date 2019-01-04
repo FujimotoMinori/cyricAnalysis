@@ -132,6 +132,7 @@ int checkflipbit(const string& inputFile){
 
   //compare bits in 2 files
   double f[8] = {};
+  double ef[8] = {};
   double f0[8] = {};
   double f1[8] = {};
   int total= 0;
@@ -176,16 +177,24 @@ int checkflipbit(const string& inputFile){
   }
 
   
-  for (int i=0; i<=8; i++) {
+  for (int i=0; i<8; i++) {
     std::cout << "numbers of false bits in bit[" << i << "] = " << f[i] << std::endl;
     //summary << "bits[" << i << "]  " << f[i] << std::endl;
     //summary << f[i] << " " << std::endl;
-    if(i == 0 | i == 1 | i == 2) f[i] = f[i]/nbitS;
-    else f[i] = f[i]/nbitD;
+    if(i == 0 | i == 1 | i == 2) {
+            ef[i] = sqrt(f[i])/nbitS;
+            std::cout << "ef= " << ef[i] <<std::endl;
+	    f[i] = f[i]/nbitS;
+    }
+    else {
+            ef[i] = sqrt(f[i])/nbitD;
+            std::cout << "ef= " << ef[i] <<std::endl;
+	    f[i] = f[i]/nbitD;
+    }
     std::cout << "numbers of false bits in bit[" << i << "] = " << f[i] << std::endl;
     htot->Fill(i,f[i]);
     std::cout << "error=" << htot->GetBinError(i) << std::endl;
-    htot->SetBinError(i,0.0002);
+    htot->SetBinError(i,ef[i]);
     std::cout << "error=" << htot->GetBinError(i) << std::endl;
     hbit0->Fill(i,f0[i]);
     hbit1->Fill(i,f1[i]);
