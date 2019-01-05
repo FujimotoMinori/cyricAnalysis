@@ -18,7 +18,7 @@ int analyze2(const string& inputFile){
   std::cout << "#-----start analyze2.cxx-----" << std::endl;
  
   //set open file
-  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00041_PR00001.txt";
+  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00034_PR00001.txt";
   TString ifn2 = inputFile;
   std::cout << "#inputFile=" <<ifn2 << std::endl;
   ifstream fin;

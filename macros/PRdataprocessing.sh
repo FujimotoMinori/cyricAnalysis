@@ -6,7 +6,7 @@
 target=/home/pixeldaq/cyric/afterIrrad/src/registerdata
 
 #for particular files in target directory
-for f in `\find $target -name 'run00041_PR*.txt'`; do
+for f in `\find $target -name 'run00035_PR*.txt'`; do
     root -l -b -q '/home/pixeldaq/cyric/cyricAnalysis/macros/analyze2.cxx("'$f'")'
     echo "processed file: $f"
 done
