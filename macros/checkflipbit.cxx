@@ -183,18 +183,19 @@ int checkflipbit(const string& inputFile){
     //summary << f[i] << " " << std::endl;
     if(i == 0 | i == 1 | i == 2) {
             ef[i] = sqrt(f[i])/nbitS;
-            std::cout << "ef= " << ef[i] <<std::endl;
+            //std::cout << "ef= " << ef[i] <<std::endl;
 	    f[i] = f[i]/nbitS;
     }
     else {
             ef[i] = sqrt(f[i])/nbitD;
-            std::cout << "ef= " << ef[i] <<std::endl;
+            //std::cout << "ef= " << ef[i] <<std::endl;
 	    f[i] = f[i]/nbitD;
     }
     std::cout << "numbers of false bits in bit[" << i << "] = " << f[i] << std::endl;
     htot->Fill(i,f[i]);
-    std::cout << "error=" << htot->GetBinError(i) << std::endl;
+    //std::cout << "error=" << htot->GetBinError(i) << std::endl;
     htot->SetBinError(i,ef[i]);
+    std::cout << "value=" << htot->GetBinContent(i) << std::endl;
     std::cout << "error=" << htot->GetBinError(i) << std::endl;
     hbit0->Fill(i,f0[i]);
     hbit1->Fill(i,f1[i]);
@@ -221,7 +222,10 @@ int checkflipbit(const string& inputFile){
 
   htot->GetYaxis()->SetRangeUser(0,0.0120);
   htot->SetStats(0);
-  htot->Draw("hist e");
+  //std::cout << "number of bin=  " << htot->GetBinError(7) << std::endl;
+  //std::cout << "error of bin0=  " << htot->GetBinError(0) << std::endl;
+  htot->SetBinError(8,ef[7]);
+  htot->Draw("hist e1");
   gPad->SetLeftMargin(0.15);
   canv->Print(name,"pdf");
   canv->Print(name + "]" ,"pdf");
