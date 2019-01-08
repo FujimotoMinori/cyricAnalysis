@@ -22,10 +22,12 @@ int checkflipbit(const string& inputFile){
   TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00047_PR00001.txt";
   TString ifn2 = inputFile;
   
+  /*
   TString name;
   name.Form("canv47.pdf");
   TCanvas* canv = new TCanvas(name.Data(),name.Data(),1000,800);
   canv->Print(name + "[","pdf");
+  */
 
   std::cout << "#inputFile=" <<ifn2 << std::endl;
   ifstream fin;
@@ -83,7 +85,6 @@ int checkflipbit(const string& inputFile){
   //set file for summary output
   //std::ofstream summary("registerresults/summary.txt" ,std::ios::app);
 
-  /*
   //make histograms
   TH2F *h0 = new TH2F("h0","bits[0];column;row",400,0,399,192,0,191);
   TH2F *h1 = new TH2F("h1","bits[1];column;row",400,0,399,192,0,191);
@@ -93,7 +94,6 @@ int checkflipbit(const string& inputFile){
   TH2F *h5 = new TH2F("h5","bits[5];column;row",400,0,399,192,0,191);
   TH2F *h6 = new TH2F("h6","bits[6];column;row",400,0,399,192,0,191);
   TH2F *h7 = new TH2F("h7","bits[7];column;row",400,0,399,192,0,191);
-  */
 
   TH1F *htot = new TH1F("htot","bit flipped;# of bit;ratio of bit flip",8,0,8);
   TH1F *hbit0 = new TH1F("hbit0","bit flipped;# of bit;#of bit flip",8,0,8);
@@ -116,7 +116,6 @@ int checkflipbit(const string& inputFile){
 	bits[i][col][row] = bv; 
 	bits2[i][col][row] = bv2; 
       }
-      /*
       if(bits2[0][col][row] == 0b1) h0->Fill(col,row); 
       if(bits2[1][col][row] == 0b1) h1->Fill(col,row); 
       if(bits2[2][col][row] == 0b1) h2->Fill(col,row); 
@@ -125,7 +124,6 @@ int checkflipbit(const string& inputFile){
       if(bits2[5][col][row] == 0b1) h5->Fill(col,row); 
       if(bits2[6][col][row] == 0b1) h6->Fill(col,row); 
       if(bits2[7][col][row] == 0b1) h7->Fill(col,row); 
-*/
     }
   }
   std::cout << "now here" << std::endl;
@@ -225,10 +223,11 @@ int checkflipbit(const string& inputFile){
   //std::cout << "number of bin=  " << htot->GetBinError(7) << std::endl;
   //std::cout << "error of bin0=  " << htot->GetBinError(0) << std::endl;
   htot->SetBinError(8,ef[7]);
+  TCanvas *canvas = new TCanvas("canvas", "canvas",1000,1000);
   htot->Draw("hist e1");
   gPad->SetLeftMargin(0.15);
-  canv->Print(name,"pdf");
-  canv->Print(name + "]" ,"pdf");
+  //canv->Print(name,"pdf");
+  //canv->Print(name + "]" ,"pdf");
   //htot->Draw("hist");
   /*
   canv->Print(name,"pdf");
@@ -237,6 +236,7 @@ int checkflipbit(const string& inputFile){
   hbit1->Draw("hist");
   canv->Print(name,"pdf");
   canv->Print(name + "]" ,"pdf");
+  */
   //Draw histograms
   TCanvas *c1 = new TCanvas("c", "c",1000,1000);
   gStyle->SetOptStat(11);
@@ -257,7 +257,7 @@ int checkflipbit(const string& inputFile){
   h6->Draw("colz");
   c1->cd(8); 
   h7->Draw("colz");
-  */
+  canvas->Print("bitflipped","pdf");
  
   //fout->Write();
   //fout->Close();
