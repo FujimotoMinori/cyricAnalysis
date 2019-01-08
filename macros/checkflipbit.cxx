@@ -238,8 +238,12 @@ int checkflipbit(const string& inputFile){
   canv->Print(name + "]" ,"pdf");
   */
   //Draw histograms
-  TCanvas *c1 = new TCanvas("c", "c",1000,1000);
   gStyle->SetOptStat(11);
+  gStyle->SetPalette(1);
+  TCanvas *cb1 = new TCanvas("cb1", "cb1",1200,900);
+  h0->Draw("colz");
+  TCanvas *c1 = new TCanvas("c", "c",1000,1000);
+
   c1->Divide(2,4);
   c1->cd(1); 
   h0->Draw("colz");
@@ -257,7 +261,8 @@ int checkflipbit(const string& inputFile){
   h6->Draw("colz");
   c1->cd(8); 
   h7->Draw("colz");
-  canvas->Print("bitflipped","pdf");
+  c1->Print("bitflipped","pdf");
+  cb1->Print("bitflippedb0","pdf");
  
   //fout->Write();
   //fout->Close();
