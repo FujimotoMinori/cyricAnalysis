@@ -1,0 +1,49 @@
+
+Processing checkflipbit.cxx("/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00051_PR00040.txt")...
+#-----start checkflipbit.cxx-----
+#inputFile=/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00051_PR00040.txt
+#finished opening files
+now here
+numbers of false bits in bit[0] = 792
+numbers of false bits in bit[0] = 0.0103125
+value=0
+error=0.000366439
+numbers of false bits in bit[1] = 758
+numbers of false bits in bit[1] = 0.00986979
+value=0.0103125
+error=0.000358487
+numbers of false bits in bit[2] = 694
+numbers of false bits in bit[2] = 0.00903646
+value=0.00986979
+error=0.000343019
+numbers of false bits in bit[3] = 482
+numbers of false bits in bit[3] = 0.00922947
+value=0.00903646
+error=0.000420391
+numbers of false bits in bit[4] = 497
+numbers of false bits in bit[4] = 0.0095167
+value=0.00922947
+error=0.000426882
+numbers of false bits in bit[5] = 510
+numbers of false bits in bit[5] = 0.00976562
+value=0.0095167
+error=0.000432429
+numbers of false bits in bit[6] = 473
+numbers of false bits in bit[6] = 0.00905714
+value=0.00976562
+error=0.000416448
+numbers of false bits in bit[7] = 502
+numbers of false bits in bit[7] = 0.00961244
+value=0.00905714
+error=0.000429024
+numbers of Sync false bits = 76800
+numbers of Diff false bits = 52224
+numbers of total false bits = 4708
+numbers of total0 false bits = 2640
+numbers of total1 false bits = 2068
+numbers of bit0 = 368640
+numbers of bit0 = 245760
+numbers of bit1 = 245760
+ratio of total0 false bits = 0.0107422+-0.00020907
+ratio of total1 false bits = 0.00841471+-0.000185039
+(int) 0
