@@ -37,6 +37,14 @@ void beamfitfromdata(/*const string& inputFile*/) {
     //draw histogram
     TCanvas *c1 = new TCanvas("c1", "c1");
     h2->Draw("colz");
+    h2->SetTitle("flipped pixel register");
+    h2->SetTitleSize(0.12);
+    h2->SetXTitle("col");
+    h2->SetYTitle("row");
+    h2->GetXaxis()->SetTitleOffset(0.8);
+    h2->GetYaxis()->SetTitleOffset(0.8);
+    h2->GetXaxis()->SetTitleSize(0.05);
+    h2->GetYaxis()->SetTitleSize(0.05);
     TH1D *pjx = h2->ProjectionX("ProjectionX",0,192);
     TH1D *pjy = h2->ProjectionY("ProjectionY",0,400);
 

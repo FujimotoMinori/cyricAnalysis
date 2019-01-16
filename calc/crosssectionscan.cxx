@@ -14,11 +14,11 @@ static const double AllPixel = 491520;
 
 int main(){
 
-    std::cout << "run41" << std::endl; 
-    double Time = 458;
-    double N = 3461;
-    double Current = 1.01*1.0e-9;
-    double eCurrent = 0.05*1.0e-9;
+    std::cout << "run34" << std::endl; 
+    double Time = 1145;
+    double N = 9378;
+    double Current = 1.15*1.0e-9;
+    double eCurrent = 0.13*1.0e-9;
     double ratio = 0.242; //todo
     double eratio = 0.01;
 

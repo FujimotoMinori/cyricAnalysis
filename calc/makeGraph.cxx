@@ -49,6 +49,10 @@ void makeGraph(){
 	g ->Draw("ap");
 	g ->SetTitle("beamsigmax;# of slot;#sigma_{x} (mm)");
 	g ->GetXaxis()->SetLimits(0,16);
+    g ->GetXaxis()->SetTitleSize(0.04);
+    g ->GetYaxis()->SetTitleSize(0.04);
+    g ->GetXaxis()->SetTitleOffset(0.8);
+    g ->GetYaxis()->SetTitleOffset(0.8);
 
 	TGraphErrors* g2 = new TGraphErrors(n2,x2,y2,ex2,ey2);
 	g2 ->SetMarkerStyle(20);
@@ -58,10 +62,10 @@ void makeGraph(){
 
     g->Fit("pol1","","",1.0,-1.0);
 
-    TLegend* leg=new TLegend(0.5,0.2,0.85,0.3);
+    TLegend* leg=new TLegend(0.3,0.2,0.85,0.32);
     leg->AddEntry(g,"fit from finger","p");
     leg->AddEntry(g2,"fit from place of flipped bit","p");
-    leg->SetTextSize(0.03);
+    leg->SetTextSize(0.05);
     leg->Draw();
     
 }

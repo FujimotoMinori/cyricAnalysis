@@ -1,6 +1,7 @@
 /*
    readCurrent2.C
    get the top of beam current
+   use this for scanning irradiation
  */
 #include <iostream>
 #include <string>
@@ -20,16 +21,19 @@ void readCurrent2(){
     TH1F *h2 = new TH1F("h2","Dump current",50,0.,2.0e-9);
 
     //read data
-    ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20181127-29/cyric1129_1.dat");
+    //ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20181127-29/cyric1129_1.dat");
+    ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20180724-2/cyric0724_1.dat");
     std::cout << "set data" << std::endl;
     int i = 0;
     double val[1000000] = {};
+    int start = 10000;
+    int end = 10700;
     while(!ifs.eof()){
         Double_t xx;
         ifs >> xx ;
         i++;
         val[i] = xx;
-        if(i>22578&&i<23171){
+        if(i>start&&i<end){
             h1->Fill(xx);
         }
     }
@@ -40,8 +44,8 @@ void readCurrent2(){
     //get the max value max[k] in 0.5 scan
     double max[10000] = {};
     int k = 0;
-    for(int j=22578;j<=23171;j++){
-        if(j%56 == 22578%56) {
+    for(int j=start;j<=end;j++){
+        if(j%56 == start%56) {
             k++;
             max[k] = 0.;
         }
@@ -72,6 +76,7 @@ void readCurrent2(){
     f1->SetParameter(1,1.2e-9);
     f1->SetParameter(2,0.1e-9);
     h1->Fit("func","l","",0.9e-9,1.8e-9);
+    h2->SetXTitle("current (A)");
 
     TCanvas* c1 = new TCanvas("c1");
     h1->Draw();

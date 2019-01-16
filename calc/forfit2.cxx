@@ -118,11 +118,9 @@ void forfit2(){
 
     delete min;
 
-    /*
     TCanvas *c1 = new TCanvas("c1","c1");
     h1->SetStats(0);
     h1->Draw("colz");
-    */
     std::cout << "# of bitflip=  " << h2->GetEntries() << std::endl;
 
     return;
