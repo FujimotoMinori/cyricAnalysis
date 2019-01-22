@@ -33,7 +33,8 @@ void makeGraphone(){
     std::cout << "n = " << n << std::endl;
     std::cout << "mean = " << total/n << std::endl;
 
-    TCanvas* c1 = new TCanvas("c1");
+    //TCanvas* c1 = new TCanvas("c1");
+    TCanvas* c1 = new TCanvas("c1","c1",600,400);
 	TGraphErrors* g = new TGraphErrors(n,x,y,ex,ey);
 	g ->SetMarkerStyle(20);
     g->SetMarkerSize(1);
@@ -42,10 +43,15 @@ void makeGraphone(){
 	//g ->SetTitle("SEU cross section;run number ;#sigma (#times10^{-14}cm^{2})");
 	g ->SetTitle("SEU cross section;temprature ({}^{#circ}C) ;#sigma (#times10^{-14}cm^{2})");
 	//g ->SetTitle("SEU cross section;dose rate (#times10^{15}n_{eq}) ;#sigma (#times10^{-14}cm^{2})");
-    g->SetMaximum(1.5);
+    g->SetMaximum(1.0);
     //g->SetMinimum(0.0);
-    g->SetMinimum(-1.5);
+    g->SetMinimum(-1.0);
 	g ->Draw("ap");
+
+    TF1* f1 = new TF1("func1","0",-25,25); 
+    f1->SetLineColor(kBlack);
+    f1->SetLineWidth(1);
+    f1->Draw("same");
 
 }
 

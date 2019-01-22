@@ -5,7 +5,7 @@ void makeGraph(){
 	int n=0;
 
 	FILE* fp=0;
-	if( (fp=fopen("sigmax.txt","r"))==0){
+	if( (fp=fopen("sigmaz.txt","r"))==0){
 		std::printf("Cannot open file\n");
 		return;
 	}
@@ -25,7 +25,7 @@ void makeGraph(){
 	int n2=0;
 
 	FILE* fp2=0;
-	if( (fp2=fopen("sigmafitx.txt","r"))==0){
+	if( (fp2=fopen("sigmafitz.txt","r"))==0){
 		std::printf("Cannot open file\n");
 		return;
 	}
@@ -47,10 +47,10 @@ void makeGraph(){
 	g ->SetMarkerColor(kBlue);
 	g ->SetLineColor(kBlue);
 	g ->Draw("ap");
-	g ->SetTitle("beamsigmax;# of slot;#sigma_{x} (mm)");
+	g ->SetTitle("beamsigmay;# of slot;#sigma_{x} (mm)");
 	g ->GetXaxis()->SetLimits(0,16);
-    g ->GetXaxis()->SetTitleSize(0.04);
-    g ->GetYaxis()->SetTitleSize(0.04);
+    g ->GetXaxis()->SetTitleSize(0.05);
+    g ->GetYaxis()->SetTitleSize(0.05);
     g ->GetXaxis()->SetTitleOffset(0.8);
     g ->GetYaxis()->SetTitleOffset(0.8);
 
@@ -62,7 +62,7 @@ void makeGraph(){
 
     g->Fit("pol1","","",1.0,-1.0);
 
-    TLegend* leg=new TLegend(0.3,0.2,0.85,0.32);
+    TLegend* leg=new TLegend(0.35,0.2,0.85,0.32);
     leg->AddEntry(g,"fit from finger","p");
     leg->AddEntry(g2,"fit from place of flipped bit","p");
     leg->SetTextSize(0.05);
