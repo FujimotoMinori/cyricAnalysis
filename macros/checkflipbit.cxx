@@ -83,7 +83,6 @@ int checkflipbit(const string& inputFile){
   //set file for summary output
   //std::ofstream summary("registerresults/summary.txt" ,std::ios::app);
 
-  /*
   //make histograms
   TH2F *h0 = new TH2F("h0","bits[0];column;row",400,0,399,192,0,191);
   TH2F *h1 = new TH2F("h1","bits[1];column;row",400,0,399,192,0,191);
@@ -93,7 +92,22 @@ int checkflipbit(const string& inputFile){
   TH2F *h5 = new TH2F("h5","bits[5];column;row",400,0,399,192,0,191);
   TH2F *h6 = new TH2F("h6","bits[6];column;row",400,0,399,192,0,191);
   TH2F *h7 = new TH2F("h7","bits[7];column;row",400,0,399,192,0,191);
-  */
+  h0->GetXaxis()->SetTitleSize(0.05);
+  h0->GetYaxis()->SetTitleSize(0.05);
+  h1->GetXaxis()->SetTitleSize(0.05);
+  h1->GetYaxis()->SetTitleSize(0.05);
+  h2->GetXaxis()->SetTitleSize(0.05);
+  h2->GetYaxis()->SetTitleSize(0.05);
+  h3->GetXaxis()->SetTitleSize(0.05);
+  h3->GetYaxis()->SetTitleSize(0.05);
+  h4->GetXaxis()->SetTitleSize(0.05);
+  h4->GetYaxis()->SetTitleSize(0.05);
+  h5->GetXaxis()->SetTitleSize(0.05);
+  h5->GetYaxis()->SetTitleSize(0.05);
+  h6->GetXaxis()->SetTitleSize(0.05);
+  h6->GetYaxis()->SetTitleSize(0.05);
+  h7->GetXaxis()->SetTitleSize(0.05);
+  h7->GetYaxis()->SetTitleSize(0.05);
 
   TH1F *htot = new TH1F("htot","bit flipped;bit position;ratio of bit flip",8,0,8);
   TH1F *hbit0 = new TH1F("hbit0","bit flipped;# of bit;#of bit flip",8,0,8);
@@ -116,7 +130,6 @@ int checkflipbit(const string& inputFile){
 	bits[i][col][row] = bv; 
 	bits2[i][col][row] = bv2; 
       }
-      /*
       if(bits2[0][col][row] == 0b1) h0->Fill(col,row); 
       if(bits2[1][col][row] == 0b1) h1->Fill(col,row); 
       if(bits2[2][col][row] == 0b1) h2->Fill(col,row); 
@@ -125,7 +138,6 @@ int checkflipbit(const string& inputFile){
       if(bits2[5][col][row] == 0b1) h5->Fill(col,row); 
       if(bits2[6][col][row] == 0b1) h6->Fill(col,row); 
       if(bits2[7][col][row] == 0b1) h7->Fill(col,row); 
-      */
     }
   }
   std::cout << "now here" << std::endl;
@@ -239,7 +251,6 @@ int checkflipbit(const string& inputFile){
   canv->Print(name + "]" ,"pdf");
   */
   //Draw histograms
-  /*
   gStyle->SetOptStat(11);
   gStyle->SetPalette(1);
   TCanvas *cb1 = new TCanvas("cb1", "cb1",1200,900);
@@ -265,7 +276,6 @@ int checkflipbit(const string& inputFile){
   h7->Draw("colz");
   c1->Print("bitflipped","pdf");
   cb1->Print("bitflippedb0","pdf");
-  */
  
   //fout->Write();
   //fout->Close();
