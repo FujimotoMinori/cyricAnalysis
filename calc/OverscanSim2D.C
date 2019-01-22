@@ -73,10 +73,10 @@ void OverscanSim2D(){
   TCanvas *c1 = new TCanvas("c1","c1",600,400);
   //c1->Divide(3,1);
   //c1->cd(1);
-  //h1->Draw("COLZ");
+  h1->Draw("COLZ");
   std::cout << "2sigma overscan fiducial / total current: " << h1->Integral(binx0,binx1,biny0,biny1)/h1->Integral() << std::endl;
   //c1->cd(2);
-  h2->Draw("COLZ");
+  //h2->Draw("COLZ");
   std::cout << "1sigma os / 2sigma os : " << h2->Integral(binx0,binx1,biny0,biny1)/h1->Integral(binx0,binx1,biny0,biny1) << std::endl;
   //c1->cd(3);
   //h3->Draw("COLZ");
