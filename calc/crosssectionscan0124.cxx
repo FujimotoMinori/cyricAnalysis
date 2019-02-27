@@ -1,18 +1,21 @@
 /*
+  crosssectionscan0124.cxx
   calcurate cross section of irradiation by scanning
+  the error 
 */
 
 #include <iostream>
 #include <cmath>
 #include <math.h>
 #define _USE_MATH_DEFINES
+using namespace std;
 
 static const double ECHARGE = 1.6*1.0e-19;
 static const double X = 2.0;
 static const double Y = 0.96;
 static const double AllPixel = 491520;
 
-int main(){
+void crosssectionscan0124(){
 
     std::cout << "run34" << std::endl; 
     double Time = 1145;
@@ -22,9 +25,11 @@ int main(){
     double ratio = 0.242; 
     double eratio = 0.01;
 
+
+    //double eN = sqrt(N);
     double eN = sqrt(N);
     double Fraction = Current*ratio; 
-    double eFraction = sqrt(pow(eCurrent*ratio,2)+pow(Current*eratio,2)); 
+    double eFraction = sqrt(TMath::Power(eCurrent*ratio,2)+TMath::Power(Current*eratio,2)); 
     double S = X*Y;
     double L,eL;
     double F,eF;
@@ -48,14 +53,13 @@ int main(){
     std::cout << "Fxtime=" << Fxtime << " +- " << eFxtime << std::endl; 
 
     Sigma = N/Fxtime;
-    eSigma = sqrt(pow(Fxtime*eN,2)+pow(N*eFxtime,2))/pow(Fxtime,2); 
+    eSigma = sqrt(TMath::Power(Fxtime*eN,2)+TMath::Power(N*eFxtime,2))/TMath::Power(Fxtime,2); 
     std::cout << "Sigma=" << Sigma << " +- " << eSigma << std::endl; 
 
     SigmaPixel = Sigma/AllPixel;
     eSigmaPixel = eSigma/AllPixel;
     std::cout << "SigmaPixel=" << SigmaPixel << " +- " << eSigmaPixel << std::endl; 
     
-    return 0;
-
+    return;
 }
 
