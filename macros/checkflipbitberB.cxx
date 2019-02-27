@@ -1,6 +1,7 @@
 /*
-    checkflipbit.C
+    checkflipbitverB.C
     compare two files
+    version Binominal Error
     count # of flipped bits/0->1/1->0
 */
 #include <iostream>
@@ -15,15 +16,15 @@
 #include <TCanvas.h>
 #include <TString.h>
 
-int checkflipbit(const string& inputFile){
+int checkflipbitberB(const string& inputFile){
   std::cout << "#-----start checkflipbit.cxx-----" << std::endl;
  
   //set open file
-  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00041_PR00001.txt";
+  TString ifn = "/home/pixeldaq/cyric/afterIrrad/src/registerdata/run00047_PR00001.txt";
   TString ifn2 = inputFile;
   
   TString name;
-  name.Form("canv41.pdf");
+  name.Form("canv47.pdf");
   TCanvas* canv = new TCanvas(name.Data(),name.Data(),1000,800);
   canv->Print(name + "[","pdf");
 
@@ -77,13 +78,14 @@ int checkflipbit(const string& inputFile){
   }
 
   //set root file for output
-  string foutname = "output41.root";
-  TFile* fout = TFile::Open(foutname.c_str(), "RECREATE");
+  //string foutname = "output.root";
+  //TFile* fout = TFile::Open(foutname.c_str(), "RECREATE");
 
   //set file for summary output
   //std::ofstream summary("registerresults/summary.txt" ,std::ios::app);
 
   //make histograms
+  /*
   TH2F *h0 = new TH2F("h0","bits[0];column;row",400,0,399,192,0,191);
   TH2F *h1 = new TH2F("h1","bits[1];column;row",400,0,399,192,0,191);
   TH2F *h2 = new TH2F("h2","bits[2];column;row",400,0,399,192,0,191);
@@ -108,6 +110,7 @@ int checkflipbit(const string& inputFile){
   h6->GetYaxis()->SetTitleSize(0.05);
   h7->GetXaxis()->SetTitleSize(0.05);
   h7->GetYaxis()->SetTitleSize(0.05);
+  */
 
   TH1F *htot = new TH1F("htot","bit flipped;bit position;ratio of bit flip",8,0,8);
   TH1F *hbit0 = new TH1F("hbit0","bit flipped;# of bit;#of bit flip",8,0,8);
@@ -130,6 +133,7 @@ int checkflipbit(const string& inputFile){
 	bits[i][col][row] = bv; 
 	bits2[i][col][row] = bv2; 
       }
+      /*
       if(bits2[0][col][row] == 0b1) h0->Fill(col,row); 
       if(bits2[1][col][row] == 0b1) h1->Fill(col,row); 
       if(bits2[2][col][row] == 0b1) h2->Fill(col,row); 
@@ -138,6 +142,7 @@ int checkflipbit(const string& inputFile){
       if(bits2[5][col][row] == 0b1) h5->Fill(col,row); 
       if(bits2[6][col][row] == 0b1) h6->Fill(col,row); 
       if(bits2[7][col][row] == 0b1) h7->Fill(col,row); 
+      */
     }
   }
   std::cout << "now here" << std::endl;
@@ -239,7 +244,6 @@ int checkflipbit(const string& inputFile){
   htot->SetBinError(8,ef[7]);
   //TCanvas *canvas = new TCanvas("canvas", "canvas",1000,1000);
   htot->Draw("hist e1");
-  htot->Write();
   gPad->SetLeftMargin(0.15);
   canv->Print(name,"pdf");
   canv->Print(name + "]" ,"pdf");
@@ -252,34 +256,34 @@ int checkflipbit(const string& inputFile){
   canv->Print(name + "]" ,"pdf");
   */
   //Draw histograms
-  gStyle->SetOptStat(11);
-  gStyle->SetPalette(1);
-  TCanvas *cb1 = new TCanvas("cb1", "cb1",1200,900);
-  h0->Draw("colz");
-  TCanvas *c1 = new TCanvas("c", "c",1000,1000);
+  //gStyle->SetOptStat(11);
+  //gStyle->SetPalette(1);
+  //TCanvas *cb1 = new TCanvas("cb1", "cb1",1200,900);
+  //h0->Draw("colz");
+  //TCanvas *c1 = new TCanvas("c", "c",1000,1000);
 
-  c1->Divide(2,4);
-  c1->cd(1); 
-  h0->Draw("colz");
-  c1->cd(2); 
-  h1->Draw("colz");
-  c1->cd(3); 
-  h2->Draw("colz");
-  c1->cd(4); 
-  h3->Draw("colz");
-  c1->cd(5); 
-  h4->Draw("colz");
-  c1->cd(6); 
-  h5->Draw("colz");
-  c1->cd(7); 
-  h6->Draw("colz");
-  c1->cd(8); 
-  h7->Draw("colz");
+  //c1->Divide(2,4);
+  //c1->cd(1); 
+  //h0->Draw("colz");
+  //c1->cd(2); 
+  //h1->Draw("colz");
+  //c1->cd(3); 
+  //h2->Draw("colz");
+  //c1->cd(4); 
+  //h3->Draw("colz");
+  //c1->cd(5); 
+  //h4->Draw("colz");
+  //c1->cd(6); 
+  //h5->Draw("colz");
+  //c1->cd(7); 
+  //h6->Draw("colz");
+  //c1->cd(8); 
+  //h7->Draw("colz");
   //c1->Print("bitflipped","pdf");
   //cb1->Print("bitflippedb0","pdf");
  
-  fout->Write();
-  fout->Close();
+  //fout->Write();
+  //fout->Close();
   //summary.close();
 
   fin.close();
@@ -289,6 +293,7 @@ int checkflipbit(const string& inputFile){
   std::cout << "#-----finished checkflipbit.cxx-----" << std::endl;
 
 }
+
 
 
 
