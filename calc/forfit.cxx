@@ -1,4 +1,7 @@
 //for calculation of the beam point 
+//without any error
+//this is the final version without error
+
 #include "TF1.h"
 #include "TMinuit.h"
 #include <iostream>
@@ -6,6 +9,7 @@
 #include <math.h>
 #define _USE_MATH_DEFINES
 
+//run 53
 static const double ECHARGE = 1.6*1.0e-19;
 static const double Current = 1.23*1.0e-9; //[A]
 static const double Time = 240-2*18; //[s]
