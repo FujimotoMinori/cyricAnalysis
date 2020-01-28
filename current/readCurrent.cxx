@@ -15,7 +15,8 @@
     TH1F *h2 = new TH1F("h2","h2",100,-2.0e-9,2.0e-9);
 
     //read data
-    ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20180724-2/cyric0724_1.dat");
+    ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20181127-29/cyric1129_1.dat");
+    //ifstream ifs("/Users/fujimoto/Desktop/DumpCurrent_CYRIC_20180724-2/cyric0724_1.dat");
     std::cout << "set data" << std::endl;
     int i;
     while(!ifs.eof()){

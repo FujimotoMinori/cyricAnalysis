@@ -1,4 +1,5 @@
 //for calculation of the beam point 
+//to calculate error of fitting from error of Current and beamsizes
 #include "TF1.h"
 #include "TMinuit.h"
 #include <iostream>
